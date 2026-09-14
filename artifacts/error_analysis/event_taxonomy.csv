@@ -1,0 +1,7 @@
+event_type,Event,Count
+true_positive,True Positive,222
+false_negative,False Negative,279
+background_false_positive,Background False Positive,100
+classification_error,Classification Error,38
+localization_error,Localization Error,34
+duplicate_detection,Duplicate Detection,17

@@ -1,0 +1,20 @@
+experiment_id: F_final_fcos_tuned
+architecture: FCOS ResNet50 FPN
+input:
+  color_space: RGB
+  tensor_layout: CHW
+  dtype: float32
+  range: [0.0, 1.0]
+  model_resolution: 768
+  resize: preserve aspect ratio; longest side becomes 768
+  padding: top-left placement on 768x768 canvas
+  padding_value: ImageNet RGB mean so normalized padding is zero
+  normalization: torchvision GeneralizedRCNNTransform ImageNet mean/std
+postprocessing:
+  confidence_threshold: 0.5
+classes:
+  0: Impacted
+  1: Caries
+  2: Periapical Lesion
+  3: Deep Caries
+model_label_offset: 1

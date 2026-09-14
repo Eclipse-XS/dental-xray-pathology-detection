@@ -1,0 +1,16 @@
+{
+  "reason": "INVALID_EARLY_STOPPING",
+  "excluded_from_winner_selection": true,
+  "runs": {
+    "D4_top1_confirm": {
+      "observed_epochs": 2,
+      "configured_patience": 6,
+      "status": "INVALID_EARLY_STOPPING"
+    },
+    "D5_top2_confirm": {
+      "observed_epochs": 4,
+      "configured_patience": 6,
+      "status": "INVALID_EARLY_STOPPING"
+    }
+  }
+}

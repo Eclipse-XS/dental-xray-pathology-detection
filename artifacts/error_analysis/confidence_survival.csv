@@ -1,0 +1,5 @@
+predicted_class,candidate_predictions,accepted_predictions,survival_fraction
+Impacted,495,83,0.16767676767676767
+Caries,2224,281,0.12634892086330934
+Periapical Lesion,332,2,0.006024096385542169
+Deep Caries,1054,45,0.04269449715370019

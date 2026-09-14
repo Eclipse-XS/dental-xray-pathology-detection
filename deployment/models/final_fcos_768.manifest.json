@@ -1,0 +1,28 @@
+{
+  "status": "exported_unvalidated",
+  "experiment_id": "F_final_fcos_tuned",
+  "checkpoint": "C:\\Users\\Eclipse\\PycharmProjects\\Dental-Xray-Pathology-Detection\\artifacts\\refinement\\fcos\\F_final_fcos_tuned\\best.pth",
+  "checkpoint_sha256": "ec4ee94b2bf7afcb77873fe4d26915bec2c7af71f09cd68353beb65561ca783d",
+  "onnx_path": "C:\\Users\\Eclipse\\PycharmProjects\\Dental-Xray-Pathology-Detection\\deployment\\models\\final_fcos_768.onnx",
+  "onnx_sha256": "f7ec4a2bdc7b2aaaa1b6e5104374f8ac9c19a94428b4d366722b4bc8a362699b",
+  "input": {
+    "name": "image",
+    "shape": [
+      3,
+      768,
+      768
+    ],
+    "dtype": "float32",
+    "range": [
+      0,
+      1
+    ]
+  },
+  "outputs": [
+    "boxes",
+    "scores",
+    "labels",
+    "num_detections"
+  ],
+  "opset": 17
+}

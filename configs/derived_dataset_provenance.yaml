@@ -1,0 +1,42 @@
+derived_yolo:
+  path_at_documentation: "data/model_ready/dentex_yolo"
+  classification: "derived_framework_specific_representation"
+  canonical_source: "data/processed/dentex_diagnosis"
+  conversion_notebook: "notebooks/02_preprocessing.ipynb"
+  conversion_section: "9. Canonical COCO to YOLO Annotation Conversion"
+  builder_function: "convert_coco_to_yolo"
+  intended_persistence: "generated_on_demand"
+  intended_post_cleanup_state: "absent"
+  deterministic: true
+  persisted_conversion_stochastic: false
+  image_bytes_identical_to_canonical: true
+  coordinate_format: "class_id x_center y_center width height"
+  coordinate_precision_decimals: 10
+  formulas:
+    x_center: "(x + width / 2) / image_width"
+    y_center: "(y + height / 2) / image_height"
+    width: "width / image_width"
+    height: "height / image_height"
+  class_order:
+    0: "Impacted"
+    1: "Caries"
+    2: "Periapical Lesion"
+    3: "Deep Caries"
+  split_membership_source: "canonical train.json, val.json, and test.json"
+  train_images: 493
+  validation_images: 106
+  test_images: 106
+  image_file_count: 705
+  label_file_count: 705
+  annotation_row_count: 3529
+  empty_label_file_count: 27
+  historical_total_bytes: 2891756462
+  historical_data_yaml_sha256: "42291b85473f611d558c8ce28e798a26b16d99812d14b14dfc46185e5fa7b7b9"
+  historical_labels_manifest_sha256: "0ff1e489c54fcfdf4d90b0efb6e38b3c03971e7ad6da20299e73ff842a351e61"
+  historical_images_manifest_sha256: "2cd518e76b90866936924f7a77ccac75f6b0a700205800f9b935c4d5db17e8aa"
+  manifest_algorithm: "SHA256 over sorted relative-path records: uint32_be(path_utf8_length) + path_utf8 + uint64_be(file_size) + binary_file_sha256"
+  data_yaml_path_sensitive: true
+  data_yaml_note: "The historical YAML embeds the absolute repository path; exact YAML bytes require rebuilding at the same path, while dataset semantics remain portable."
+  local_copy_present_at_manifest_creation: true
+  provenance_status: "retrospectively_documented_derived_representation"
+  timestamp_created: "2026-09-14T20:44:07.2130462+03:00"

@@ -1,0 +1,9 @@
+selection_reason,image_id,file_name,event_type,confidence,iou
+Strong true-positive case,197,train_362.png,true_positive,0.6489328742027283,0.8301088809967041
+False-negative-heavy image,190,train_462.png,false_negative,0.34821370244026184,0.519783079624176
+Background false positive,549,train_504.png,background_false_positive,0.6710330247879028,0.0
+Classification error,63,train_592.png,classification_error,0.661297619342804,0.8360013365745544
+Localization error,392,train_244.png,localization_error,0.5828198194503784,0.10153573006391525
+Small-object failure,63,train_592.png,false_negative,0.49677735567092896,0.5137848854064941
+Periapical failure,164,train_510.png,false_negative,0.6016950011253357,0.0
+Caries false-positive-heavy image,155,train_485.png,background_false_positive,0.5761573910713196,0.0

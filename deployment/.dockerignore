@@ -1,0 +1,9 @@
+tests/
+orchestration/
+monitoring/
+docs/
+runtime/
+models/*.onnx
+__pycache__/
+*.pyc
+.env

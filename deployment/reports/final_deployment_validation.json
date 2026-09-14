@@ -1,0 +1,126 @@
+{
+  "overall_status": "IMPLEMENTED AND END-TO-END VALIDATED",
+  "validated_at": "2026-09-12T15:57:07Z",
+  "model": {
+    "status": "PASS",
+    "experiment_id": "F_final_fcos_tuned",
+    "architecture": "FCOS ResNet50-FPN",
+    "model_version": "F_final_fcos_tuned-epoch-17",
+    "checkpoint_sha256": "ec4ee94b2bf7afcb77873fe4d26915bec2c7af71f09cd68353beb65561ca783d",
+    "onnx_sha256": "f7ec4a2bdc7b2aaaa1b6e5104374f8ac9c19a94428b4d366722b4bc8a362699b"
+  },
+  "preprocessing": {
+    "status": "PASS",
+    "specification": "strict decode; RGB; aspect-preserving longest-side resize to 768; top-left ImageNet-mean padding to 768x768; CHW float32 [0,1]; shared spatial transform; inverse box mapping and clipping",
+    "coordinate_tests": ["square", "landscape", "portrait", "odd dimensions"]
+  },
+  "onnx_export": {
+    "status": "PASS",
+    "reexport_required": false,
+    "reason": "Canonical preprocessing remains outside the unchanged fixed 3x768x768 ONNX contract.",
+    "outputs": ["boxes", "scores", "labels", "num_detections"]
+  },
+  "real_image_parity": {
+    "status": "PASS",
+    "split": "validation",
+    "images": 12,
+    "matched_detections": 574,
+    "unmatched_pytorch": 0,
+    "unmatched_onnx": 0,
+    "label_agreement": 1.0,
+    "mean_score_difference": 2.657287212199035e-7,
+    "max_score_difference": 1.1920928955078125e-6,
+    "mean_box_coordinate_difference_px": 1.4868347486967825e-5,
+    "max_box_coordinate_difference_px": 0.0001220703125,
+    "mean_matched_iou": 0.9999989529727643,
+    "matching": "greedy class-aware highest-IoU, minimum IoU 0.99"
+  },
+  "benchmarks": {
+    "status": "PASS",
+    "pytorch_cpu_model_mean_ms": 1490.07516,
+    "onnx_cpu_model_mean_ms": 1078.45243,
+    "pytorch_cuda_model_mean_ms": 92.446685,
+    "onnx_cuda": "BLOCKED: CUDAExecutionProvider is not installed",
+    "timing": "warmup applied; CUDA synchronized; preprocessing, model, postprocessing and end-to-end separated"
+  },
+  "docker": {
+    "build": "PASS",
+    "runtime": "PASS",
+    "image": "CPU-only Torch 2.11.0/Torchvision 0.26.0",
+    "postgres_health": "PASS",
+    "migration_from_empty_database": "PASS"
+  },
+  "api": {
+    "status": "PASS",
+    "health": "PASS",
+    "readiness": "PASS",
+    "model_info": "PASS",
+    "metrics": "PASS",
+    "real_prediction": {
+      "status": "PASS",
+      "prediction_id": "cd61238e-b7c3-4803-adfb-9c89b0c09d78",
+      "backend": "pytorch",
+      "detections": 6,
+      "latency_ms": 1679.998011
+    },
+    "failure_paths": {
+      "corrupted": "PASS: 422",
+      "non_image": "PASS: 422",
+      "unsupported_format": "PASS: 422",
+      "zero_byte": "PASS: 422",
+      "invalid_dimensions": "PASS: 422",
+      "oversized": "PASS: 422",
+      "missing_backend_artifact": "PASS: startup validation test",
+      "database_failure": "NOT RUN"
+    }
+  },
+  "database": {
+    "status": "PASS",
+    "backend": "PostgreSQL 16",
+    "tables": ["alembic_version", "model_versions", "prediction_requests", "detections"],
+    "persisted_requests": 1,
+    "persisted_detections": 6,
+    "model_relationship": "PASS",
+    "retrieval_endpoints": "PASS",
+    "constraints_and_indexes": "PASS"
+  },
+  "observability": {
+    "status": "PASS",
+    "structured_log_fields": ["correlation_id", "prediction_id", "backend", "model_version", "latency_ms", "detection_count", "status"],
+    "prometheus": "PASS"
+  },
+  "airflow": {
+    "static_validation": "PASS",
+    "execution": "BLOCKED",
+    "reason": "Airflow is absent locally and the stock Compose Airflow image lacks the deployment/Torch/ONNX dependencies. No run was fabricated."
+  },
+  "dvc": {
+    "status": "PASS",
+    "git_root": "C:/Users/Eclipse/PycharmProjects/Dental-Xray-Pathology-Detection",
+    "tracked": [
+      "data/processed/dentex_diagnosis",
+      "artifacts/refinement/fcos/F_final_fcos_tuned/best.pth"
+    ],
+    "remote": "NOT CONFIGURED",
+    "workspace_integrity": "PASS: 705 images, 3 annotations, unchanged checkpoint SHA256"
+  },
+  "mlflow": {
+    "status": "BLOCKED",
+    "run_id": "5b2630950f384adeb9c68bacc44764bb",
+    "reason": "Artifact directory exists but meta.yaml is absent; no history or registry state was fabricated."
+  },
+  "quality": {
+    "ruff": "PASS",
+    "pytest": "PASS: 15 tests",
+    "compile": "PASS",
+    "regular_ci_requires_training_or_gpu": false
+  },
+  "known_limitations": [
+    "All available real validation images sampled were landscape; portrait and square coordinate handling is covered synthetically.",
+    "Canonical 768-square mean padding adds more background than torchvision's minimal divisible-by-32 internal batch padding.",
+    "ONNX CUDA, Airflow runtime, and formal MLflow run resolution remain blocked as documented."
+  ],
+  "model_retraining_performed": false,
+  "hyperparameter_tuning_performed": false,
+  "test_based_model_selection_performed": false
+}

@@ -1,0 +1,24 @@
+{
+  "experiment_id": "E4_detr_640",
+  "training_protocol": "detr_screening_fixed_lr_v1",
+  "best_epoch": 18,
+  "best_mAP50_95": 0.15549175441265106,
+  "per_class": {
+    "Impacted": {
+      "AP50_95": 0.23573385179042816,
+      "recall": 0.3676767647266388
+    },
+    "Caries": {
+      "AP50_95": 0.15954600274562836,
+      "recall": 0.5571830868721008
+    },
+    "Periapical Lesion": {
+      "AP50_95": 0.0,
+      "recall": 0.0
+    },
+    "Deep Caries": {
+      "AP50_95": 0.029678095132112503,
+      "recall": 0.2281690090894699
+    }
+  }
+}

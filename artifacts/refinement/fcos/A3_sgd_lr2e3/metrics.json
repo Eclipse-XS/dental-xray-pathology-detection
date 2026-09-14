@@ -1,0 +1,61 @@
+{
+  "experiment_id": "A3_sgd_lr2e3",
+  "stage": "optimizer_search",
+  "best_epoch": 8,
+  "mAP50_95": 0.24551402032375336,
+  "mAP50": 0.39799705147743225,
+  "recall": 0.5845862627029419,
+  "precision": NaN,
+  "per_class": {
+    "Impacted": {
+      "AP50_95": 0.568710207939148,
+      "recall": 0.6848484873771667,
+      "AP50": NaN
+    },
+    "Caries": {
+      "AP50_95": 0.2064041942358017,
+      "recall": 0.704507052898407,
+      "AP50": NaN
+    },
+    "Periapical Lesion": {
+      "AP50_95": 0.061002761125564575,
+      "recall": 0.43913042545318604,
+      "AP50": NaN
+    },
+    "Deep Caries": {
+      "AP50_95": 0.14593888819217682,
+      "recall": 0.5098591446876526,
+      "AP50": NaN
+    }
+  },
+  "training_time_seconds": 2790.4413105999993,
+  "parameter_count": 32071370,
+  "trainable_parameter_count": 32071370,
+  "model_size_mb": 256.22709,
+  "mlflow_run_id": "6da7c19c450f4626a8de55ab7c3c7729",
+  "inference_latency_ms": 60.83072000001266,
+  "peak_gpu_memory_mb": 799.263232,
+  "factor": "optimizer_lr",
+  "parent_experiment": "R0_fcos_reference",
+  "artifact_name": "A3_sgd_lr2e3",
+  "backbone": "resnet50",
+  "image_size": 640,
+  "batch_size": 2,
+  "epochs": 20,
+  "optimizer": "SGD",
+  "learning_rate": 0.002,
+  "scheduler": "fixed",
+  "weight_decay": 0.0005,
+  "momentum": 0.9,
+  "adamw_betas": [
+    0.9,
+    0.999
+  ],
+  "gradient_clip_norm": 10.0,
+  "augmentation_profile": "none",
+  "freeze_policy": "full",
+  "warmup_epochs": 0,
+  "warmup_start_factor": 0.1,
+  "protocol_version": "fcos_refinement_v1",
+  "status": "planned"
+}

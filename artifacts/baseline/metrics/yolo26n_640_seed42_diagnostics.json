@@ -1,0 +1,50 @@
+{
+  "run_name": "yolo26n_640_seed42",
+  "checkpoint": {
+    "path": "C:\\Users\\Eclipse\\PycharmProjects\\Dental-Xray-Pathology-Detection\\artifacts\\baseline\\yolo26n_640_seed42\\weights\\best.pt",
+    "filename": "best.pt",
+    "size": 5365829,
+    "mtime_ns": 1788875822827546600,
+    "sha256": "604c0d499e9b8ce486ebc9c4fc6544251ac08a824454c9258ad8cc7431860344"
+  },
+  "training_dynamics": {
+    "best_epoch": 18,
+    "final_epoch": 20,
+    "best_map50_95": 0.26679,
+    "final_map50_95": 0.26397,
+    "best_to_final_drop": 0.0028200000000000447,
+    "recent_map_slope": -0.00031600000000004427,
+    "train_box_loss_recent_slope": -0.006798000000000054,
+    "validation_box_loss_recent_slope": -0.0005960000000002216,
+    "metrics_plateaued": true,
+    "potential_overfitting": "No strong evidence from this heuristic",
+    "potential_underfitting": "Metrics plateaued; longer training alone is not clearly justified"
+  },
+  "approximate_size_recall": [
+    {
+      "size_group": "very small",
+      "GT objects": 6,
+      "Matched": 2,
+      "Approximate recall": 0.3333333333333333
+    },
+    {
+      "size_group": "small",
+      "GT objects": 163,
+      "Matched": 77,
+      "Approximate recall": 0.4723926380368098
+    },
+    {
+      "size_group": "medium",
+      "GT objects": 337,
+      "Matched": 180,
+      "Approximate recall": 0.5341246290801187
+    },
+    {
+      "size_group": "large",
+      "GT objects": 42,
+      "Matched": 23,
+      "Approximate recall": 0.5476190476190477
+    }
+  ],
+  "generated_at": "2026-09-08T14:37:49.640297+00:00"
+}

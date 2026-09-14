@@ -1,0 +1,61 @@
+{
+  "experiment_id": "B4_plateau",
+  "stage": "scheduler_search",
+  "best_epoch": 8,
+  "mAP50_95": 0.27042561769485474,
+  "mAP50": 0.4308730363845825,
+  "recall": 0.6244354248046875,
+  "precision": NaN,
+  "per_class": {
+    "Impacted": {
+      "AP50_95": 0.5659977197647095,
+      "recall": 0.6757575869560242,
+      "AP50": NaN
+    },
+    "Caries": {
+      "AP50_95": 0.2257164567708969,
+      "recall": 0.6957746744155884,
+      "AP50": NaN
+    },
+    "Periapical Lesion": {
+      "AP50_95": 0.07244261354207993,
+      "recall": 0.530434787273407,
+      "AP50": NaN
+    },
+    "Deep Caries": {
+      "AP50_95": 0.217545747756958,
+      "recall": 0.5957746505737305,
+      "AP50": NaN
+    }
+  },
+  "training_time_seconds": 2438.323948300007,
+  "parameter_count": 32071370,
+  "trainable_parameter_count": 32071370,
+  "model_size_mb": 383.669842,
+  "mlflow_run_id": "ad0b01eca8774f50bc2388063b53133d",
+  "inference_latency_ms": 56.63937499994063,
+  "peak_gpu_memory_mb": 1055.477248,
+  "factor": "scheduler",
+  "parent_experiment": "A4_adamw_lr1e4",
+  "artifact_name": "B4_plateau",
+  "backbone": "resnet50",
+  "image_size": 640,
+  "batch_size": 2,
+  "epochs": 20,
+  "optimizer": "AdamW",
+  "learning_rate": 0.0001,
+  "scheduler": "plateau",
+  "weight_decay": 0.0005,
+  "momentum": 0.9,
+  "adamw_betas": [
+    0.9,
+    0.999
+  ],
+  "gradient_clip_norm": 10.0,
+  "augmentation_profile": "none",
+  "freeze_policy": "full",
+  "warmup_epochs": 0,
+  "warmup_start_factor": 0.1,
+  "protocol_version": "fcos_refinement_v1",
+  "status": "planned"
+}

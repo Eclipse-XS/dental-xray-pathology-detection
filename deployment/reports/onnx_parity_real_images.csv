@@ -1,0 +1,13 @@
+image,width,height,raw_pytorch,raw_onnx,matched,unmatched_pytorch,unmatched_onnx,post_threshold_pytorch,post_threshold_onnx
+train_0.png,2850,1316,36,36,36,0,0,6,6
+train_100.png,2872,1504,39,39,39,0,0,4,4
+train_108.png,2817,1316,47,47,47,0,0,5,5
+train_118.png,2688,1504,50,50,50,0,0,9,9
+train_123.png,2724,1316,31,31,31,0,0,0,0
+train_130.png,2821,1316,15,15,15,0,0,0,0
+train_151.png,2984,1316,57,57,57,0,0,3,3
+train_152.png,2872,1504,58,58,58,0,0,7,7
+train_158.png,2872,1504,54,54,54,0,0,4,4
+train_159.png,2820,1316,96,96,96,0,0,11,11
+train_16.png,3076,1536,28,28,28,0,0,3,3
+train_160.png,2868,1504,63,63,63,0,0,4,4

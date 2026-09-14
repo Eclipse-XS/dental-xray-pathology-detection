@@ -1,0 +1,28 @@
+{
+  "final_model": "F_final_fcos_tuned",
+  "prediction_source": "test_predictions.pt",
+  "image_count": 106,
+  "fixed_confidence_threshold": 0.5,
+  "fixed_iou_threshold": 0.5,
+  "diagnostic_localization_iou_floor": 0.1,
+  "event_counts": {
+    "false_negative": 279,
+    "true_positive": 222,
+    "background_false_positive": 100,
+    "classification_error": 38,
+    "localization_error": 34,
+    "duplicate_detection": 17
+  },
+  "dominant_failure_mode": "false_negative",
+  "easiest_class": "Impacted",
+  "hardest_class": "Periapical Lesion",
+  "small_object_recall": 0.31137724550898205,
+  "medium_object_recall": 0.45698924731182794,
+  "large_object_recall": null,
+  "caries_share_canonical_fp": 0.8342541436464088,
+  "periapical_candidates_below_threshold": 330,
+  "periapical_candidate_count": 332,
+  "model_loaded": false,
+  "inference_rerun": false,
+  "threshold_tuned": false
+}

@@ -1,0 +1,13 @@
+{
+  "mean_latency_ms": 55.62409333336594,
+  "median_latency_ms": 54.92110000000139,
+  "p95_latency_ms": 64.16861000009247,
+  "approximate_fps": 17.977821121628118,
+  "device": "cuda:0",
+  "image_resolution": 768,
+  "batch_size": 1,
+  "parameter_count": 32124490,
+  "model_size_mb": 383.672722,
+  "timed_images": 30,
+  "peak_gpu_memory_mb": 1639.343104
+}

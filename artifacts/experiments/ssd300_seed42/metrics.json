@@ -1,0 +1,31 @@
+{
+  "experiment_id": "E1_ssd300",
+  "best_epoch": 10,
+  "best_mAP50_95": 0.1371500939130783,
+  "per_class": {
+    "Impacted": {
+      "precision": NaN,
+      "recall": 0.526262640953064,
+      "AP50": NaN,
+      "AP50_95": 0.3132430911064148
+    },
+    "Caries": {
+      "precision": NaN,
+      "recall": 0.4138028025627136,
+      "AP50": NaN,
+      "AP50_95": 0.0852789431810379
+    },
+    "Periapical Lesion": {
+      "precision": NaN,
+      "recall": 0.10000000149011612,
+      "AP50": NaN,
+      "AP50_95": 0.02453441731631756
+    },
+    "Deep Caries": {
+      "precision": NaN,
+      "recall": 0.33521127700805664,
+      "AP50": NaN,
+      "AP50_95": 0.025451621040701866
+    }
+  }
+}

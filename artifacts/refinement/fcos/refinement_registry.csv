@@ -1,0 +1,38 @@
+experiment_id,stage,factor,parent_experiment,artifact_name,backbone,image_size,batch_size,epochs,optimizer,learning_rate,scheduler,weight_decay,momentum,adamw_betas,gradient_clip_norm,augmentation_profile,freeze_policy,warmup_epochs,warmup_start_factor,run_role,early_stopping_patience,early_stopping_min_delta,minimum_epochs_before_early_stopping,seed,protocol_version,status
+A1_sgd_lr5e4,optimizer_search,optimizer_lr,R0_fcos_reference,A1_sgd_lr5e4,,,,,SGD,0.0005,,,,,,,,,,standard,,0.0,0,42,fcos_refinement_v1,planned
+A2_sgd_lr1e3,optimizer_search,optimizer_lr,R0_fcos_reference,A2_sgd_lr1e3,,,,,SGD,0.001,,,,,,,,,,standard,,0.0,0,42,fcos_refinement_v1,planned
+A3_sgd_lr2e3,optimizer_search,optimizer_lr,R0_fcos_reference,A3_sgd_lr2e3,,,,,SGD,0.002,,,,,,,,,,standard,,0.0,0,42,fcos_refinement_v1,planned
+A4_adamw_lr1e4,optimizer_search,optimizer_lr,R0_fcos_reference,A4_adamw_lr1e4,,,,,AdamW,0.0001,,0.0005,,"(0.9, 0.999)",,,,,,standard,,0.0,0,42,fcos_refinement_v1,planned
+A5_adamw_lr3e4,optimizer_search,optimizer_lr,R0_fcos_reference,A5_adamw_lr3e4,,,,,AdamW,0.0003,,0.0005,,"(0.9, 0.999)",,,,,,standard,,0.0,0,42,fcos_refinement_v1,planned
+A6_adamw_lr5e4,optimizer_search,optimizer_lr,R0_fcos_reference,A6_adamw_lr5e4,,,,,AdamW,0.0005,,0.0005,,"(0.9, 0.999)",,,,,,standard,,0.0,0,42,fcos_refinement_v1,planned
+B1_fixed,scheduler_search,scheduler,WINNER:optimizer_search,B1_fixed,,,,,,,fixed,,,,,,,,,standard,,0.0,0,42,fcos_refinement_v1,planned
+B2_cosine,scheduler_search,scheduler,WINNER:optimizer_search,B2_cosine,,,,,,,cosine,,,,,,,,,standard,,0.0,0,42,fcos_refinement_v1,planned
+B3_cosine_warmup,scheduler_search,scheduler,WINNER:optimizer_search,B3_cosine_warmup,,,,,,,cosine_warmup,,,,,,,3.0,0.1,standard,,0.0,0,42,fcos_refinement_v1,planned
+B4_plateau,scheduler_search,scheduler,WINNER:optimizer_search,B4_plateau,,,,,,,plateau,,,,,,,,,standard,,0.0,0,42,fcos_refinement_v1,planned
+R1_wd0,regularization,weight_decay,WINNER:scheduler_search,R1_wd0,,,,,,,,0.0,,,,,,,,standard,,0.0,0,42,fcos_refinement_v1,planned
+R2_wd1e5,regularization,weight_decay,WINNER:scheduler_search,R2_wd1e5,,,,,,,,1e-05,,,,,,,,standard,,0.0,0,42,fcos_refinement_v1,planned
+R3_wd1e4,regularization,weight_decay,WINNER:scheduler_search,R3_wd1e4,,,,,,,,0.0001,,,,,,,,standard,,0.0,0,42,fcos_refinement_v1,planned
+R4_wd5e4,regularization,weight_decay,WINNER:scheduler_search,R4_wd5e4,,,,,,,,0.0005,,,,,,,,standard,,0.0,0,42,fcos_refinement_v1,planned
+R5_wd1e3,regularization,weight_decay,WINNER:scheduler_search,R5_wd1e3,,,,,,,,0.001,,,,,,,,standard,,0.0,0,42,fcos_refinement_v1,planned
+G1_no_clip,regularization,gradient_clipping,WINNER:scheduler_search,G1_no_clip,,,,,,,,,,,0.0,,,,,standard,,0.0,0,42,fcos_refinement_v1,planned
+G2_clip5,regularization,gradient_clipping,WINNER:scheduler_search,G2_clip5,,,,,,,,,,,5.0,,,,,standard,,0.0,0,42,fcos_refinement_v1,planned
+G3_clip10,regularization,gradient_clipping,WINNER:scheduler_search,G3_clip10,,,,,,,,,,,10.0,,,,,standard,,0.0,0,42,fcos_refinement_v1,planned
+C1_light_aug,augmentation,augmentation,WINNER:regularization,C1_light_aug,,,,,,,,,,,,light,,,,standard,,0.0,0,42,fcos_refinement_v1,planned
+C2_medium_aug,augmentation,augmentation,WINNER:regularization,C2_medium_aug,,,,,,,,,,,,medium,,,,standard,,0.0,0,42,fcos_refinement_v1,planned
+C3_strong_aug,augmentation,augmentation,WINNER:regularization,C3_strong_aug,,,,,,,,,,,,strong,,,,standard,,0.0,0,42,fcos_refinement_v1,planned
+V1_512,resolution,input_resolution,WINNER:augmentation,V1_512,,512.0,4.0,,,,,,,,,,,,,standard,,0.0,0,42,fcos_refinement_v1,planned
+V2_640,resolution,input_resolution,WINNER:augmentation,V2_640,,640.0,2.0,,,,,,,,,,,,,standard,,0.0,0,42,fcos_refinement_v1,planned
+V3_768,resolution,input_resolution,WINNER:augmentation,V3_768,,768.0,1.0,,,,,,,,,,,,,standard,,0.0,0,42,fcos_refinement_v1,planned
+V4_896,resolution,input_resolution,WINNER:augmentation,V4_896,,896.0,1.0,,,,,,,,,,,,,standard,,0.0,0,42,fcos_refinement_v1,planned
+V5_1024,resolution,input_resolution,WINNER:augmentation,V5_1024,,1024.0,1.0,,,,,,,,,,,,,standard,,0.0,0,42,fcos_refinement_v1,planned
+D1_resnet34_proxy,backbone_proxy,backbone_proxy,WINNER:resolution,D1_resnet34_proxy,resnet34,,,10.0,,,,,,,,,,,,proxy,,0.0,0,42,fcos_refinement_v1,planned
+D2_resnet50_proxy,backbone_proxy,backbone_proxy,WINNER:resolution,D2_resnet50_proxy,resnet50,,,10.0,,,,,,,,,,,,proxy,,0.0,0,42,fcos_refinement_v1,planned
+D3_resnet101_proxy,backbone_proxy,backbone_proxy,WINNER:resolution,D3_resnet101_proxy,resnet101,,,10.0,,,,,,,,,,,,proxy,,0.0,0,42,fcos_refinement_v1,planned
+D4_top1_confirm,backbone_confirmation_invalid,historical_invalid,D2_resnet50_proxy,D4_top1_confirm,,,,20.0,,,,,,,,,,,,invalid_confirmation,6.0,0.002,0,42,fcos_refinement_v1,INVALID_EARLY_STOPPING
+D5_top2_confirm,backbone_confirmation_invalid,historical_invalid,D3_resnet101_proxy,D5_top2_confirm,,,,20.0,,,,,,,,,,,,invalid_confirmation,6.0,0.002,0,42,fcos_refinement_v1,INVALID_EARLY_STOPPING
+D4_resnet50_confirm_fixed,backbone_confirmation,backbone_confirmation,D2_resnet50_proxy,D4_resnet50_confirm_fixed,,,,20.0,,,,,,,,,,,,confirmation,6.0,0.002,10,42,fcos_refinement_v1,planned
+D5_resnet101_confirm_optional,backbone_confirmation_optional,backbone_confirmation,D3_resnet101_proxy,D5_resnet101_confirm_optional,,,,20.0,,,,,,,,,,,,confirmation_optional,6.0,0.002,10,42,fcos_refinement_v1,planned
+E1_full_finetune,finetuning,freeze_policy,WINNER:backbone_confirmation,E1_full_finetune,,,,,,,,,,,,,full,,,standard,,0.0,0,42,fcos_refinement_v1,planned
+E2_freeze_backbone_3ep,finetuning,freeze_policy,WINNER:backbone_confirmation,E2_freeze_backbone_3ep,,,,,,,,,,,,,freeze_backbone_3ep,,,standard,,0.0,0,42,fcos_refinement_v1,planned
+E3_freeze_backbone_5ep,finetuning,freeze_policy,WINNER:backbone_confirmation,E3_freeze_backbone_5ep,,,,,,,,,,,,,freeze_backbone_5ep,,,standard,,0.0,0,42,fcos_refinement_v1,planned
+F_final_fcos_tuned,final_combination,combined_best,WINNER:finetuning,F_final_fcos_tuned,,,,20.0,,,,,,,,,,,,standard,6.0,0.002,10,42,fcos_refinement_v1,planned

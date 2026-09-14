@@ -1,0 +1,6 @@
+outs:
+- md5: 69add7b4710ae4ee282d18c5b02f155e.dir
+  size: 2893869595
+  nfiles: 709
+  hash: md5
+  path: dentex_diagnosis

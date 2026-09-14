@@ -1,0 +1,10 @@
+app:
+  name: Dental X-ray Pathology Detection
+  api_prefix: /api/v1
+  environment: development
+  experimental_only: true
+uploads:
+  allowed_mime_types: [image/jpeg, image/png, image/webp]
+  max_bytes: 15728640
+  min_dimension: 64
+  max_dimension: 8192

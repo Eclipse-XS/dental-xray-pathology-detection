@@ -1,0 +1,8 @@
+{
+  "experiment_id": "E2_fcos_640",
+  "model": "FCOS ResNet50 FPN",
+  "best_checkpoint": "C:\\Users\\Eclipse\\PycharmProjects\\Dental-Xray-Pathology-Detection\\artifacts\\experiments\\fcos_seed42\\best.pth",
+  "selection_metric": "validation_mAP50_95",
+  "validation_mAP50_95": 0.27638527750968933,
+  "status": "provisional_until_test_evaluation"
+}

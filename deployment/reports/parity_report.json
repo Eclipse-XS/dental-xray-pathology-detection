@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "image": "data\\processed\\dentex_diagnosis\\images\\test\\train_102.png",
+      "reference_detections": 28,
+      "candidate_detections": 28,
+      "labels_equal": true,
+      "max_score_abs_error": 7.152557373046875e-07,
+      "max_box_abs_error_px": 6.103515625e-05,
+      "passed": true
+    }
+  ]
+}

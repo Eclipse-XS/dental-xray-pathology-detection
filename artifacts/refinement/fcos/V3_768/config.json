@@ -1,0 +1,27 @@
+{
+  "experiment_id": "V3_768",
+  "stage": "resolution",
+  "factor": "input_resolution",
+  "parent_experiment": "C1_light_aug",
+  "artifact_name": "V3_768",
+  "backbone": "resnet50",
+  "image_size": 768,
+  "batch_size": 1,
+  "epochs": 20,
+  "optimizer": "AdamW",
+  "learning_rate": 0.0001,
+  "scheduler": "cosine_warmup",
+  "weight_decay": 0.0005,
+  "momentum": 0.9,
+  "adamw_betas": [
+    0.9,
+    0.999
+  ],
+  "gradient_clip_norm": 5.0,
+  "augmentation_profile": "light",
+  "freeze_policy": "full",
+  "warmup_epochs": 3,
+  "warmup_start_factor": 0.1,
+  "protocol_version": "fcos_refinement_v1",
+  "status": "planned"
+}

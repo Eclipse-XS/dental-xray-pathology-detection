@@ -1,0 +1,51 @@
+{
+  "backend": {
+    "experiment_id": "F_final_fcos_tuned",
+    "model_version": "F_final_fcos_tuned-epoch-17",
+    "architecture": "FCOS ResNet50 FPN",
+    "image_size": 768,
+    "class_names": {
+      "0": "Impacted",
+      "1": "Caries",
+      "2": "Periapical Lesion",
+      "3": "Deep Caries"
+    },
+    "backend": "pytorch",
+    "artifact_path": "C:\\Users\\Eclipse\\PycharmProjects\\Dental-Xray-Pathology-Detection\\artifacts\\refinement\\fcos\\F_final_fcos_tuned\\best.pth",
+    "artifact_sha256": "ec4ee94b2bf7afcb77873fe4d26915bec2c7af71f09cd68353beb65561ca783d",
+    "runtime": "torch-2.11.0+cu128"
+  },
+  "iterations": 20,
+  "warmup_iterations": 5,
+  "execution_provider": [
+    "cuda:0"
+  ],
+  "threading": {
+    "onnx_intra_op_threads": "runtime_default",
+    "onnx_inter_op_threads": "runtime_default"
+  },
+  "preprocessing": {
+    "mean_ms": 189.05039500000385,
+    "median_ms": 165.93839999995907,
+    "p95_ms": 308.13639999996667,
+    "fps": 5.28959487230894
+  },
+  "model_inference": {
+    "mean_ms": 92.44668500009539,
+    "median_ms": 94.43495000004987,
+    "p95_ms": 108.01480000009178,
+    "fps": 10.817045521956446
+  },
+  "postprocessing": {
+    "mean_ms": 0.12360000009721261,
+    "median_ms": 0.13350000017453567,
+    "p95_ms": 0.14000000010128133,
+    "fps": 8090.6148803680435
+  },
+  "end_to_end": {
+    "mean_ms": 285.89775999994345,
+    "median_ms": 257.95919999973194,
+    "p95_ms": 418.5777999991842,
+    "fps": 3.4977538823675913
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "confidence_threshold": 0.5,
+  "iou_match_threshold": 0.5,
+  "TP": 230,
+  "FP": 181,
+  "FN": 309,
+  "Precision": 0.559610705596107,
+  "Recall": 0.4267161410018553,
+  "F1": 0.4842105263157894,
+  "per_class": [
+    {
+      "class_id": 0,
+      "class_name": "Impacted",
+      "TP": 74,
+      "FP": 9,
+      "FN": 22,
+      "Precision": 0.891566265060241,
+      "Recall": 0.7708333333333334,
+      "F1": 0.8268156424581005
+    },
+    {
+      "class_id": 1,
+      "class_name": "Caries",
+      "TP": 130,
+      "FP": 151,
+      "FN": 203,
+      "Precision": 0.4626334519572954,
+      "Recall": 0.39039039039039036,
+      "F1": 0.42345276872964166
+    },
+    {
+      "class_id": 2,
+      "class_name": "Periapical Lesion",
+      "TP": 2,
+      "FP": 0,
+      "FN": 24,
+      "Precision": 1.0,
+      "Recall": 0.07692307692307693,
+      "F1": 0.14285714285714288
+    },
+    {
+      "class_id": 3,
+      "class_name": "Deep Caries",
+      "TP": 24,
+      "FP": 21,
+      "FN": 60,
+      "Precision": 0.5333333333333333,
+      "Recall": 0.2857142857142857,
+      "F1": 0.37209302325581395
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "run_id": "5b2630950f384adeb9c68bacc44764bb",
+  "experiment_id": "F_final_fcos_tuned",
+  "mlflow_status": "RUN_METADATA_MISSING",
+  "lifecycle": {
+    "candidate": true,
+    "selected": true,
+    "validated": true,
+    "exported": false,
+    "deployed": false
+  },
+  "source": "existing_mlflow_artifact_directory",
+  "note": "Artifacts exist for the recorded run ID, but meta.yaml is absent, so MLflow cannot resolve the run (Run '5b2630950f384adeb9c68bacc44764bb' not found). No registry or run state was fabricated."
+}

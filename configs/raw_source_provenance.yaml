@@ -1,0 +1,47 @@
+raw_source:
+  dataset_name: "DENTEX Challenge 2023"
+  external_source_url: "https://www.kaggle.com/datasets/truthisneverlinear/dentex-challenge-2023"
+  local_raw_root_at_documentation: "raw"
+  selected_source_path: "raw/training_data/training_data/quadrant-enumeration-disease"
+  source_json_filename: "train_quadrant_enumeration_disease.json"
+  source_image_directory: "raw/training_data/training_data/quadrant-enumeration-disease/xrays"
+  source_json_sha256: "6e1f702cfd6c83bc63660d9a0fd79fe5b26d5a54b63d93b954a02cc254314483"
+  raw_json_sha256:
+    train_quadrant.json: "e78b0ced929f3bacc9a475f16bd437992b863cb3419dac7a2aaad5bbac49d8b8"
+    train_quadrant_enumeration.json: "0ee103b5bc98d19bd875ac592e213c6aa7b844e4dda64b006a5784bc632e208d"
+    train_quadrant_enumeration_disease.json: "6e1f702cfd6c83bc63660d9a0fd79fe5b26d5a54b63d93b954a02cc254314483"
+  number_of_source_images: 705
+  number_of_annotations: 3529
+  selected_image_total_bytes: 2891368969
+  selected_filename_manifest: "configs/raw_selected_filenames.csv"
+  selected_filename_csv_sha256: "57d06f17a219e56f95b04359b117b6ffa712ed1b692432820c85ad98919fdb23"
+  selected_filename_manifest_sha256: "2052c03903d1e94c5934e20baa5408ff356e5ccaf3be20c1cdeedf915a8d55d4"
+  selected_image_content_manifest_sha256: "fa5beade4dd7041265c00e047ac65f17df8b7830cf2d0634e3bf6867e525a27c"
+  content_manifest_algorithm: "SHA256 over sorted records: uint32_be(filename_utf8_length) + filename_utf8 + uint64_be(file_size) + binary_file_sha256"
+  selected_classes:
+    0: "Impacted"
+    1: "Caries"
+    2: "Periapical Lesion"
+    3: "Deep Caries"
+  preparation_notebook: "notebooks/00_prepare_dataset.ipynb"
+  split_seed: 42
+  acquisition_date: null
+  external_dataset_revision: null
+  local_copy_present_at_manifest_creation: true
+  intended_post_cleanup_state: "absent; reacquire externally if canonical reconstruction is required"
+  provenance_status: "retrospectively_documented_source"
+  timestamp_created: "2026-09-14T20:44:07.2130462+03:00"
+
+canonical_dataset:
+  path: "data/processed/dentex_diagnosis"
+  dvc_pointer: "data/processed/dentex_diagnosis.dvc"
+  dvc_hash: "69add7b4710ae4ee282d18c5b02f155e.dir"
+  number_of_images: 705
+  number_of_annotations: 3529
+  train_images: 493
+  validation_images: 106
+  test_images: 106
+  train_json_sha256: "7dc1d59ecdc335b6bdb168b3b51fab597b6c94e424fcf4db1bdcca667a6416e7"
+  val_json_sha256: "847f6ec03e368d8827fd9dfc0d0a2895cb443cab4e94ddd79d0e09d1fe0e03e8"
+  test_json_sha256: "908d5ec0a98016baa094e801f939f9ccbe52c0b7fffdb79f2bdb26499a38b511"
+  split_summary_sha256: "464eab563d8dd71242a0ae3b210da1b2430db5afb2d357aed7c9cd2572dad524"

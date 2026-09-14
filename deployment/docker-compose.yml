@@ -1,0 +1,57 @@
+name: dentex-deployment
+services:
+  api:
+    profiles: [core]
+    build: .
+    env_file: .env
+    ports: ["8000:8000"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ../artifacts:/project/artifacts:ro
+      - ./models:/project/deployment/models:ro
+      - uploads:/runtime/uploads
+  postgres:
+    profiles: [core]
+    image: postgres:16-alpine
+    env_file: .env
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    volumes: ["postgres-data:/var/lib/postgresql/data"]
+  prometheus:
+    profiles: [monitoring]
+    image: prom/prometheus:v2.55.1
+    command: ["--config.file=/etc/prometheus/prometheus.yml"]
+    volumes: ["./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro"]
+    ports: ["9090:9090"]
+  grafana:
+    profiles: [monitoring]
+    image: grafana/grafana:11.4.0
+    volumes: ["./monitoring/grafana/provisioning:/etc/grafana/provisioning:ro"]
+    ports: ["3000:3000"]
+  minio:
+    profiles: [storage]
+    image: minio/minio:RELEASE.2024-12-18T13-15-44Z
+    command: server /data --console-address :9001
+    env_file: .env
+    ports: ["9000:9000", "9001:9001"]
+    volumes: ["minio-data:/data"]
+  airflow:
+    profiles: [orchestration]
+    image: apache/airflow:2.10.4-python3.11
+    command: standalone
+    environment:
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      AIRFLOW_PROJ_DIR: /project
+    volumes:
+      - ./orchestration/airflow/dags:/opt/airflow/dags:ro
+      - ..:/project
+    ports: ["8080:8080"]
+volumes:
+  postgres-data:
+  uploads:
+  minio-data:

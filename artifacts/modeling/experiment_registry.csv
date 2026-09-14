@@ -1,0 +1,6 @@
+experiment_id,model_name,family,architecture,artifact_name,image_size,batch_size,epochs,status,optimizer,learning_rate,weight_decay,augmentation,pretrained,momentum,gradient_clip_norm,training_protocol
+E0_yolo26n_640_baseline,YOLO26n,yolo,one-stage,../baseline/yolo26n_640_seed42,640,4,20,completed,auto (AdamW),,,"{'degrees': 5.0, 'translate': 0.03, 'scale': 0.08, 'hsv_v': 0.1, 'mosaic': 0.0, 'mixup': 0.0, 'fliplr': 0.0, 'flipud': 0.0}",True,0.9,10.0,architecture_screening_fixed_lr_v1
+E1_ssd300,SSD300 VGG16,ssd,one-stage,ssd300_seed42,300,4,20,pending,SGD,0.001,0.0005,{},True,0.9,10.0,architecture_screening_fixed_lr_v1
+E2_fcos_640,FCOS ResNet50 FPN,fcos,one-stage anchor-free,fcos_seed42,640,2,20,pending,SGD,0.001,0.0005,{},True,0.9,10.0,architecture_screening_fixed_lr_v1
+E3_fasterrcnn_640,Faster R-CNN ResNet50 FPN,faster_rcnn,two-stage,fasterrcnn_seed42,640,2,20,pending,SGD,0.002,0.0005,{},True,0.9,10.0,architecture_screening_fixed_lr_v1
+E4_detr_640,DETR ResNet50,detr,transformer,detr_seed42,640,2,20,pending,AdamW,0.0001,0.0001,{},True,0.9,1.0,detr_screening_fixed_lr_v1

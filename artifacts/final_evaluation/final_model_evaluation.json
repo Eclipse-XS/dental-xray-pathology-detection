@@ -1,0 +1,123 @@
+{
+  "selected_final_experiment_id": "F_final_fcos_tuned",
+  "selected_checkpoint": "C:\\Users\\Eclipse\\PycharmProjects\\Dental-Xray-Pathology-Detection\\artifacts\\refinement\\fcos\\F_final_fcos_tuned\\best.pth",
+  "validation_metrics": {
+    "mAP50_95": 0.28129565715789795,
+    "mAP50": 0.49570468068122864,
+    "mAR100": 0.5055831670761108
+  },
+  "test_metrics": {
+    "mAP50_95": 0.26642677187919617,
+    "mAP50": 0.4407493770122528,
+    "mAR100": 0.5169562697410583,
+    "images": 106
+  },
+  "operating_point": {
+    "confidence_threshold": 0.5,
+    "iou_match_threshold": 0.5,
+    "TP": 230,
+    "FP": 181,
+    "FN": 309,
+    "Precision": 0.559610705596107,
+    "Recall": 0.4267161410018553,
+    "F1": 0.4842105263157894,
+    "per_class": [
+      {
+        "class_id": 0,
+        "class_name": "Impacted",
+        "TP": 74,
+        "FP": 9,
+        "FN": 22,
+        "Precision": 0.891566265060241,
+        "Recall": 0.7708333333333334,
+        "F1": 0.8268156424581005
+      },
+      {
+        "class_id": 1,
+        "class_name": "Caries",
+        "TP": 130,
+        "FP": 151,
+        "FN": 203,
+        "Precision": 0.4626334519572954,
+        "Recall": 0.39039039039039036,
+        "F1": 0.42345276872964166
+      },
+      {
+        "class_id": 2,
+        "class_name": "Periapical Lesion",
+        "TP": 2,
+        "FP": 0,
+        "FN": 24,
+        "Precision": 1.0,
+        "Recall": 0.07692307692307693,
+        "F1": 0.14285714285714288
+      },
+      {
+        "class_id": 3,
+        "class_name": "Deep Caries",
+        "TP": 24,
+        "FP": 21,
+        "FN": 60,
+        "Precision": 0.5333333333333333,
+        "Recall": 0.2857142857142857,
+        "F1": 0.37209302325581395
+      }
+    ]
+  },
+  "inference_benchmark": {
+    "mean_latency_ms": 55.62409333336594,
+    "median_latency_ms": 54.92110000000139,
+    "p95_latency_ms": 64.16861000009247,
+    "approximate_fps": 17.977821121628118,
+    "device": "cuda:0",
+    "image_resolution": 768,
+    "batch_size": 1,
+    "parameter_count": 32124490,
+    "model_size_mb": 383.672722,
+    "timed_images": 30,
+    "peak_gpu_memory_mb": 1639.343104
+  },
+  "model_card": {
+    "architecture": "FCOS",
+    "backbone": "resnet50",
+    "input_resolution": "768x768",
+    "selected_experiment": "F_final_fcos_tuned",
+    "checkpoint": "C:\\Users\\Eclipse\\PycharmProjects\\Dental-Xray-Pathology-Detection\\artifacts\\refinement\\fcos\\F_final_fcos_tuned\\best.pth",
+    "validation": {
+      "mAP50_95": 0.28129565715789795,
+      "mAP50": 0.49570468068122864,
+      "mAR100": 0.5055831670761108
+    },
+    "final_test": {
+      "mAP50_95": 0.26642677187919617,
+      "mAP50": 0.4407493770122528,
+      "mAR100": 0.5169562697410583,
+      "images": 106
+    },
+    "fixed_operating_point": {
+      "confidence_threshold": 0.5,
+      "iou_match_threshold": 0.5,
+      "TP": 230,
+      "FP": 181,
+      "FN": 309,
+      "Precision": 0.559610705596107,
+      "Recall": 0.4267161410018553,
+      "F1": 0.4842105263157894
+    },
+    "best_performing_class": "Impacted",
+    "weakest_performing_class": "Periapical Lesion",
+    "model_size_mb": 383.672722,
+    "mean_inference_latency_ms": 55.62409333336594,
+    "fps": 17.977821121628118,
+    "main_observed_failure_modes": {
+      "correct_detections": 222,
+      "classification_errors": 38,
+      "background_false_positives": 151,
+      "false_negatives_after_spatial_matching": 279,
+      "diagnostic_only": true
+    },
+    "evaluation_status": "FINAL_TEST_EVALUATED"
+  },
+  "evaluation_timestamp": "2026-09-12T14:36:02.772582+00:00",
+  "status": "FINAL_TEST_EVALUATED"
+}

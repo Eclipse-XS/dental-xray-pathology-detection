@@ -1,0 +1,66 @@
+{
+  "experiment_id": "E2_freeze_backbone_3ep",
+  "stage": "finetuning",
+  "best_epoch": 18,
+  "mAP50_95": 0.2577296495437622,
+  "mAP50": 0.4608308970928192,
+  "recall": 0.48030513525009155,
+  "precision": NaN,
+  "per_class": {
+    "Impacted": {
+      "AP50_95": 0.4625338315963745,
+      "recall": 0.573737382888794,
+      "AP50": NaN
+    },
+    "Caries": {
+      "AP50_95": 0.2268713414669037,
+      "recall": 0.6011267900466919,
+      "AP50": NaN
+    },
+    "Periapical Lesion": {
+      "AP50_95": 0.13625043630599976,
+      "recall": 0.2956521809101105,
+      "AP50": NaN
+    },
+    "Deep Caries": {
+      "AP50_95": 0.20526304841041565,
+      "recall": 0.4507042169570923,
+      "AP50": NaN
+    }
+  },
+  "training_time_seconds": 5116.611544300016,
+  "parameter_count": 32071370,
+  "trainable_parameter_count": 32071370,
+  "model_size_mb": 383.672978,
+  "mlflow_run_id": "e690e2e968844dc98ff48561fd664888",
+  "inference_latency_ms": 47.11728999973275,
+  "peak_gpu_memory_mb": 1047.193088,
+  "factor": "freeze_policy",
+  "parent_experiment": "D4_resnet50_confirm_fixed",
+  "artifact_name": "E2_freeze_backbone_3ep",
+  "backbone": "resnet50",
+  "image_size": 768,
+  "batch_size": 1,
+  "epochs": 20,
+  "optimizer": "AdamW",
+  "learning_rate": 0.0001,
+  "scheduler": "cosine_warmup",
+  "weight_decay": 0.0005,
+  "momentum": 0.9,
+  "adamw_betas": [
+    0.9,
+    0.999
+  ],
+  "gradient_clip_norm": 5.0,
+  "augmentation_profile": "light",
+  "freeze_policy": "freeze_backbone_3ep",
+  "warmup_epochs": 3,
+  "warmup_start_factor": 0.1,
+  "run_role": "standard",
+  "early_stopping_patience": 6,
+  "early_stopping_min_delta": 0.0,
+  "minimum_epochs_before_early_stopping": 0,
+  "seed": 42,
+  "protocol_version": "fcos_refinement_v1",
+  "status": "planned"
+}

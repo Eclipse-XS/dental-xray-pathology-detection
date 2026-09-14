@@ -1,0 +1,2 @@
+epoch,learning_rate,backbone_frozen,epoch_time_seconds,train_loss,train_classification,train_bbox_regression,train_bbox_ctrness,mean_gradient_norm,max_gradient_norm,precision,recall,mAP50,mAP50_95
+0,1e-05,False,310.46379930000694,1.567775261329589,0.6478679360289119,0.3212514108020442,0.5986559167353184,32.081118880614305,1193.922607421875,,0.4102270007133484,0.26303380727767944,0.14493124186992645

@@ -1,0 +1,61 @@
+{
+  "experiment_id": "G3_clip10",
+  "stage": "regularization",
+  "best_epoch": 9,
+  "mAP50_95": 0.28204065561294556,
+  "mAP50": 0.4756581485271454,
+  "recall": 0.5887297987937927,
+  "precision": NaN,
+  "per_class": {
+    "Impacted": {
+      "AP50_95": 0.5355682969093323,
+      "recall": 0.6535353660583496,
+      "AP50": NaN
+    },
+    "Caries": {
+      "AP50_95": 0.2084069401025772,
+      "recall": 0.704507052898407,
+      "AP50": NaN
+    },
+    "Periapical Lesion": {
+      "AP50_95": 0.17926228046417236,
+      "recall": 0.43913042545318604,
+      "AP50": NaN
+    },
+    "Deep Caries": {
+      "AP50_95": 0.20492510497570038,
+      "recall": 0.5577464699745178,
+      "AP50": NaN
+    }
+  },
+  "training_time_seconds": 2494.025169600005,
+  "parameter_count": 32071370,
+  "trainable_parameter_count": 32071370,
+  "model_size_mb": 383.67029,
+  "mlflow_run_id": "d288b254cb2d4725a25f2c98e2156a75",
+  "inference_latency_ms": 55.0664449998294,
+  "peak_gpu_memory_mb": 1060.366848,
+  "factor": "gradient_clipping",
+  "parent_experiment": "B3_cosine_warmup",
+  "artifact_name": "G3_clip10",
+  "backbone": "resnet50",
+  "image_size": 640,
+  "batch_size": 2,
+  "epochs": 20,
+  "optimizer": "AdamW",
+  "learning_rate": 0.0001,
+  "scheduler": "cosine_warmup",
+  "weight_decay": 0.0005,
+  "momentum": 0.9,
+  "adamw_betas": [
+    0.9,
+    0.999
+  ],
+  "gradient_clip_norm": 10.0,
+  "augmentation_profile": "none",
+  "freeze_policy": "full",
+  "warmup_epochs": 3,
+  "warmup_start_factor": 0.1,
+  "protocol_version": "fcos_refinement_v1",
+  "status": "planned"
+}

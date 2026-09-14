@@ -1,0 +1,31 @@
+{
+  "experiment_id": "E2_fcos_640",
+  "best_epoch": 5,
+  "best_mAP50_95": 0.27638527750968933,
+  "per_class": {
+    "Impacted": {
+      "precision": NaN,
+      "recall": 0.6606060862541199,
+      "AP50": NaN,
+      "AP50_95": 0.5310486555099487
+    },
+    "Caries": {
+      "precision": NaN,
+      "recall": 0.5188732147216797,
+      "AP50": NaN,
+      "AP50_95": 0.22705623507499695
+    },
+    "Periapical Lesion": {
+      "precision": NaN,
+      "recall": 0.24782608449459076,
+      "AP50": NaN,
+      "AP50_95": 0.13977457582950592
+    },
+    "Deep Caries": {
+      "precision": NaN,
+      "recall": 0.3732394278049469,
+      "AP50": NaN,
+      "AP50_95": 0.14822079241275787
+    }
+  }
+}

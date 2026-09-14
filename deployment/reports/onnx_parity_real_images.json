@@ -1,0 +1,168 @@
+{
+  "status": "PASS",
+  "acceptance_criteria": {
+    "minimum_match_iou": 0.99,
+    "maximum_score_error": 0.001,
+    "maximum_box_coordinate_error_px": 0.1,
+    "unmatched_detections_allowed": 0,
+    "post_threshold_count_mismatch_allowed": 0
+  },
+  "aggregate": {
+    "images_evaluated": 12,
+    "matched_detections": 574,
+    "unmatched_pytorch": 0,
+    "unmatched_onnx": 0,
+    "label_agreement": 1.0,
+    "mean_score_difference": 2.657287212199035e-07,
+    "max_score_difference": 1.1920928955078125e-06,
+    "mean_box_coordinate_difference": 1.4868347486967825e-05,
+    "max_box_coordinate_difference": 0.0001220703125,
+    "mean_matched_iou": 0.9999989529727643
+  },
+  "images": [
+    {
+      "image": "train_0.png",
+      "width": 2850,
+      "height": 1316,
+      "raw_pytorch": 36,
+      "raw_onnx": 36,
+      "matched": 36,
+      "unmatched_pytorch": 0,
+      "unmatched_onnx": 0,
+      "post_threshold_pytorch": 6,
+      "post_threshold_onnx": 6
+    },
+    {
+      "image": "train_100.png",
+      "width": 2872,
+      "height": 1504,
+      "raw_pytorch": 39,
+      "raw_onnx": 39,
+      "matched": 39,
+      "unmatched_pytorch": 0,
+      "unmatched_onnx": 0,
+      "post_threshold_pytorch": 4,
+      "post_threshold_onnx": 4
+    },
+    {
+      "image": "train_108.png",
+      "width": 2817,
+      "height": 1316,
+      "raw_pytorch": 47,
+      "raw_onnx": 47,
+      "matched": 47,
+      "unmatched_pytorch": 0,
+      "unmatched_onnx": 0,
+      "post_threshold_pytorch": 5,
+      "post_threshold_onnx": 5
+    },
+    {
+      "image": "train_118.png",
+      "width": 2688,
+      "height": 1504,
+      "raw_pytorch": 50,
+      "raw_onnx": 50,
+      "matched": 50,
+      "unmatched_pytorch": 0,
+      "unmatched_onnx": 0,
+      "post_threshold_pytorch": 9,
+      "post_threshold_onnx": 9
+    },
+    {
+      "image": "train_123.png",
+      "width": 2724,
+      "height": 1316,
+      "raw_pytorch": 31,
+      "raw_onnx": 31,
+      "matched": 31,
+      "unmatched_pytorch": 0,
+      "unmatched_onnx": 0,
+      "post_threshold_pytorch": 0,
+      "post_threshold_onnx": 0
+    },
+    {
+      "image": "train_130.png",
+      "width": 2821,
+      "height": 1316,
+      "raw_pytorch": 15,
+      "raw_onnx": 15,
+      "matched": 15,
+      "unmatched_pytorch": 0,
+      "unmatched_onnx": 0,
+      "post_threshold_pytorch": 0,
+      "post_threshold_onnx": 0
+    },
+    {
+      "image": "train_151.png",
+      "width": 2984,
+      "height": 1316,
+      "raw_pytorch": 57,
+      "raw_onnx": 57,
+      "matched": 57,
+      "unmatched_pytorch": 0,
+      "unmatched_onnx": 0,
+      "post_threshold_pytorch": 3,
+      "post_threshold_onnx": 3
+    },
+    {
+      "image": "train_152.png",
+      "width": 2872,
+      "height": 1504,
+      "raw_pytorch": 58,
+      "raw_onnx": 58,
+      "matched": 58,
+      "unmatched_pytorch": 0,
+      "unmatched_onnx": 0,
+      "post_threshold_pytorch": 7,
+      "post_threshold_onnx": 7
+    },
+    {
+      "image": "train_158.png",
+      "width": 2872,
+      "height": 1504,
+      "raw_pytorch": 54,
+      "raw_onnx": 54,
+      "matched": 54,
+      "unmatched_pytorch": 0,
+      "unmatched_onnx": 0,
+      "post_threshold_pytorch": 4,
+      "post_threshold_onnx": 4
+    },
+    {
+      "image": "train_159.png",
+      "width": 2820,
+      "height": 1316,
+      "raw_pytorch": 96,
+      "raw_onnx": 96,
+      "matched": 96,
+      "unmatched_pytorch": 0,
+      "unmatched_onnx": 0,
+      "post_threshold_pytorch": 11,
+      "post_threshold_onnx": 11
+    },
+    {
+      "image": "train_16.png",
+      "width": 3076,
+      "height": 1536,
+      "raw_pytorch": 28,
+      "raw_onnx": 28,
+      "matched": 28,
+      "unmatched_pytorch": 0,
+      "unmatched_onnx": 0,
+      "post_threshold_pytorch": 3,
+      "post_threshold_onnx": 3
+    },
+    {
+      "image": "train_160.png",
+      "width": 2868,
+      "height": 1504,
+      "raw_pytorch": 63,
+      "raw_onnx": 63,
+      "matched": 63,
+      "unmatched_pytorch": 0,
+      "unmatched_onnx": 0,
+      "post_threshold_pytorch": 4,
+      "post_threshold_onnx": 4
+    }
+  ]
+}

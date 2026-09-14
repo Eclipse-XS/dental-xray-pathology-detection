@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Environments
+.venv/
+.venv-*/
+venv/
+env/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Raw and derived datasets
+raw/
+data/model_ready/
+
+# Canonical DVC-managed dataset contents
+data/processed/dentex_diagnosis/
+
+# Model binaries remain local unless represented by committed DVC metadata
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.onnx
+
+# MLflow live/local state
+artifacts/modeling/mlflow.db
+mlruns/
+
+# Runtime databases, logs, and caches
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.log
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+

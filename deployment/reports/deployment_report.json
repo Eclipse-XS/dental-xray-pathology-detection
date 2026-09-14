@@ -1,0 +1,429 @@
+{
+  "generated_at": "2026-09-12T15:57:57.058597+00:00",
+  "lifecycle": {
+    "candidate": true,
+    "selected": true,
+    "validated": true,
+    "exported": true,
+    "deployed": true
+  },
+  "onnx_manifest": {
+    "status": "exported_unvalidated",
+    "experiment_id": "F_final_fcos_tuned",
+    "checkpoint": "C:\\Users\\Eclipse\\PycharmProjects\\Dental-Xray-Pathology-Detection\\artifacts\\refinement\\fcos\\F_final_fcos_tuned\\best.pth",
+    "checkpoint_sha256": "ec4ee94b2bf7afcb77873fe4d26915bec2c7af71f09cd68353beb65561ca783d",
+    "onnx_path": "C:\\Users\\Eclipse\\PycharmProjects\\Dental-Xray-Pathology-Detection\\deployment\\models\\final_fcos_768.onnx",
+    "onnx_sha256": "f7ec4a2bdc7b2aaaa1b6e5104374f8ac9c19a94428b4d366722b4bc8a362699b",
+    "input": {
+      "name": "image",
+      "shape": [
+        3,
+        768,
+        768
+      ],
+      "dtype": "float32",
+      "range": [
+        0,
+        1
+      ]
+    },
+    "outputs": [
+      "boxes",
+      "scores",
+      "labels",
+      "num_detections"
+    ],
+    "opset": 17
+  },
+  "parity": {
+    "status": "PASS",
+    "acceptance_criteria": {
+      "minimum_match_iou": 0.99,
+      "maximum_score_error": 0.001,
+      "maximum_box_coordinate_error_px": 0.1,
+      "unmatched_detections_allowed": 0,
+      "post_threshold_count_mismatch_allowed": 0
+    },
+    "aggregate": {
+      "images_evaluated": 12,
+      "matched_detections": 574,
+      "unmatched_pytorch": 0,
+      "unmatched_onnx": 0,
+      "label_agreement": 1.0,
+      "mean_score_difference": 2.657287212199035e-07,
+      "max_score_difference": 1.1920928955078125e-06,
+      "mean_box_coordinate_difference": 1.4868347486967825e-05,
+      "max_box_coordinate_difference": 0.0001220703125,
+      "mean_matched_iou": 0.9999989529727643
+    },
+    "images": [
+      {
+        "image": "train_0.png",
+        "width": 2850,
+        "height": 1316,
+        "raw_pytorch": 36,
+        "raw_onnx": 36,
+        "matched": 36,
+        "unmatched_pytorch": 0,
+        "unmatched_onnx": 0,
+        "post_threshold_pytorch": 6,
+        "post_threshold_onnx": 6
+      },
+      {
+        "image": "train_100.png",
+        "width": 2872,
+        "height": 1504,
+        "raw_pytorch": 39,
+        "raw_onnx": 39,
+        "matched": 39,
+        "unmatched_pytorch": 0,
+        "unmatched_onnx": 0,
+        "post_threshold_pytorch": 4,
+        "post_threshold_onnx": 4
+      },
+      {
+        "image": "train_108.png",
+        "width": 2817,
+        "height": 1316,
+        "raw_pytorch": 47,
+        "raw_onnx": 47,
+        "matched": 47,
+        "unmatched_pytorch": 0,
+        "unmatched_onnx": 0,
+        "post_threshold_pytorch": 5,
+        "post_threshold_onnx": 5
+      },
+      {
+        "image": "train_118.png",
+        "width": 2688,
+        "height": 1504,
+        "raw_pytorch": 50,
+        "raw_onnx": 50,
+        "matched": 50,
+        "unmatched_pytorch": 0,
+        "unmatched_onnx": 0,
+        "post_threshold_pytorch": 9,
+        "post_threshold_onnx": 9
+      },
+      {
+        "image": "train_123.png",
+        "width": 2724,
+        "height": 1316,
+        "raw_pytorch": 31,
+        "raw_onnx": 31,
+        "matched": 31,
+        "unmatched_pytorch": 0,
+        "unmatched_onnx": 0,
+        "post_threshold_pytorch": 0,
+        "post_threshold_onnx": 0
+      },
+      {
+        "image": "train_130.png",
+        "width": 2821,
+        "height": 1316,
+        "raw_pytorch": 15,
+        "raw_onnx": 15,
+        "matched": 15,
+        "unmatched_pytorch": 0,
+        "unmatched_onnx": 0,
+        "post_threshold_pytorch": 0,
+        "post_threshold_onnx": 0
+      },
+      {
+        "image": "train_151.png",
+        "width": 2984,
+        "height": 1316,
+        "raw_pytorch": 57,
+        "raw_onnx": 57,
+        "matched": 57,
+        "unmatched_pytorch": 0,
+        "unmatched_onnx": 0,
+        "post_threshold_pytorch": 3,
+        "post_threshold_onnx": 3
+      },
+      {
+        "image": "train_152.png",
+        "width": 2872,
+        "height": 1504,
+        "raw_pytorch": 58,
+        "raw_onnx": 58,
+        "matched": 58,
+        "unmatched_pytorch": 0,
+        "unmatched_onnx": 0,
+        "post_threshold_pytorch": 7,
+        "post_threshold_onnx": 7
+      },
+      {
+        "image": "train_158.png",
+        "width": 2872,
+        "height": 1504,
+        "raw_pytorch": 54,
+        "raw_onnx": 54,
+        "matched": 54,
+        "unmatched_pytorch": 0,
+        "unmatched_onnx": 0,
+        "post_threshold_pytorch": 4,
+        "post_threshold_onnx": 4
+      },
+      {
+        "image": "train_159.png",
+        "width": 2820,
+        "height": 1316,
+        "raw_pytorch": 96,
+        "raw_onnx": 96,
+        "matched": 96,
+        "unmatched_pytorch": 0,
+        "unmatched_onnx": 0,
+        "post_threshold_pytorch": 11,
+        "post_threshold_onnx": 11
+      },
+      {
+        "image": "train_16.png",
+        "width": 3076,
+        "height": 1536,
+        "raw_pytorch": 28,
+        "raw_onnx": 28,
+        "matched": 28,
+        "unmatched_pytorch": 0,
+        "unmatched_onnx": 0,
+        "post_threshold_pytorch": 3,
+        "post_threshold_onnx": 3
+      },
+      {
+        "image": "train_160.png",
+        "width": 2868,
+        "height": 1504,
+        "raw_pytorch": 63,
+        "raw_onnx": 63,
+        "matched": 63,
+        "unmatched_pytorch": 0,
+        "unmatched_onnx": 0,
+        "post_threshold_pytorch": 4,
+        "post_threshold_onnx": 4
+      }
+    ]
+  },
+  "benchmarks": {
+    "benchmark_onnx_cpu": {
+      "backend": {
+        "experiment_id": "F_final_fcos_tuned",
+        "model_version": "F_final_fcos_tuned-epoch-17",
+        "architecture": "FCOS ResNet50 FPN",
+        "image_size": 768,
+        "class_names": {
+          "0": "Impacted",
+          "1": "Caries",
+          "2": "Periapical Lesion",
+          "3": "Deep Caries"
+        },
+        "backend": "onnx",
+        "artifact_path": "C:\\Users\\Eclipse\\PycharmProjects\\Dental-Xray-Pathology-Detection\\deployment\\models\\final_fcos_768.onnx",
+        "artifact_sha256": "f7ec4a2bdc7b2aaaa1b6e5104374f8ac9c19a94428b4d366722b4bc8a362699b",
+        "runtime": "onnxruntime-1.30.0",
+        "providers": [
+          "CPUExecutionProvider"
+        ]
+      },
+      "iterations": 10,
+      "pure_inference": {
+        "mean_ms": 1228.6156200001642,
+        "median_ms": 1198.0568500002846,
+        "p95_ms": 1337.210500000765,
+        "fps": 0.8139242117073738
+      },
+      "end_to_end_decode_and_inference": {
+        "mean_ms": 1402.8419200000826,
+        "median_ms": 1390.950900000007,
+        "p95_ms": 1532.284200000504,
+        "fps": 0.7128386924735904
+      }
+    },
+    "benchmark_onnx_cpu_canonical": {
+      "backend": {
+        "experiment_id": "F_final_fcos_tuned",
+        "model_version": "F_final_fcos_tuned-epoch-17",
+        "architecture": "FCOS ResNet50 FPN",
+        "image_size": 768,
+        "class_names": {
+          "0": "Impacted",
+          "1": "Caries",
+          "2": "Periapical Lesion",
+          "3": "Deep Caries"
+        },
+        "backend": "onnx",
+        "artifact_path": "C:\\Users\\Eclipse\\PycharmProjects\\Dental-Xray-Pathology-Detection\\deployment\\models\\final_fcos_768.onnx",
+        "artifact_sha256": "f7ec4a2bdc7b2aaaa1b6e5104374f8ac9c19a94428b4d366722b4bc8a362699b",
+        "runtime": "onnxruntime-1.30.0",
+        "providers": [
+          "CPUExecutionProvider"
+        ]
+      },
+      "iterations": 10,
+      "warmup_iterations": 3,
+      "execution_provider": [
+        "CPUExecutionProvider"
+      ],
+      "threading": {
+        "onnx_intra_op_threads": "runtime_default",
+        "onnx_inter_op_threads": "runtime_default"
+      },
+      "preprocessing": {
+        "mean_ms": 147.8461800000332,
+        "median_ms": 149.93144999971264,
+        "p95_ms": 168.9987999998266,
+        "fps": 6.763786524614809
+      },
+      "model_inference": {
+        "mean_ms": 1078.4524300000157,
+        "median_ms": 1070.562450000125,
+        "p95_ms": 1181.669900000088,
+        "fps": 0.9272546216989704
+      },
+      "postprocessing": {
+        "mean_ms": 0.10983999991367455,
+        "median_ms": 0.10569999994913815,
+        "p95_ms": 0.16330000016751,
+        "fps": 9104.15150023598
+      },
+      "end_to_end": {
+        "mean_ms": 1221.3282600001548,
+        "median_ms": 1231.7317000001822,
+        "p95_ms": 1306.2231000003521,
+        "fps": 0.8187806937341098
+      }
+    },
+    "benchmark_pytorch_cpu": {
+      "backend": {
+        "experiment_id": "F_final_fcos_tuned",
+        "model_version": "F_final_fcos_tuned-epoch-17",
+        "architecture": "FCOS ResNet50 FPN",
+        "image_size": 768,
+        "class_names": {
+          "0": "Impacted",
+          "1": "Caries",
+          "2": "Periapical Lesion",
+          "3": "Deep Caries"
+        },
+        "backend": "pytorch",
+        "artifact_path": "C:\\Users\\Eclipse\\PycharmProjects\\Dental-Xray-Pathology-Detection\\artifacts\\refinement\\fcos\\F_final_fcos_tuned\\best.pth",
+        "artifact_sha256": "ec4ee94b2bf7afcb77873fe4d26915bec2c7af71f09cd68353beb65561ca783d",
+        "runtime": "torch-2.11.0+cu128"
+      },
+      "iterations": 10,
+      "pure_inference": {
+        "mean_ms": 939.4356099999641,
+        "median_ms": 886.8929499999467,
+        "p95_ms": 1332.3687000001883,
+        "fps": 1.0644689102215725
+      },
+      "end_to_end_decode_and_inference": {
+        "mean_ms": 1152.8885099996842,
+        "median_ms": 1168.5790499996074,
+        "p95_ms": 1219.3919000001188,
+        "fps": 0.8673865610823669
+      }
+    },
+    "benchmark_pytorch_cpu_canonical": {
+      "backend": {
+        "experiment_id": "F_final_fcos_tuned",
+        "model_version": "F_final_fcos_tuned-epoch-17",
+        "architecture": "FCOS ResNet50 FPN",
+        "image_size": 768,
+        "class_names": {
+          "0": "Impacted",
+          "1": "Caries",
+          "2": "Periapical Lesion",
+          "3": "Deep Caries"
+        },
+        "backend": "pytorch",
+        "artifact_path": "C:\\Users\\Eclipse\\PycharmProjects\\Dental-Xray-Pathology-Detection\\artifacts\\refinement\\fcos\\F_final_fcos_tuned\\best.pth",
+        "artifact_sha256": "ec4ee94b2bf7afcb77873fe4d26915bec2c7af71f09cd68353beb65561ca783d",
+        "runtime": "torch-2.11.0+cu128"
+      },
+      "iterations": 10,
+      "warmup_iterations": 3,
+      "execution_provider": [
+        "cpu"
+      ],
+      "threading": {
+        "onnx_intra_op_threads": "runtime_default",
+        "onnx_inter_op_threads": "runtime_default"
+      },
+      "preprocessing": {
+        "mean_ms": 139.20778999990944,
+        "median_ms": 140.75054999966596,
+        "p95_ms": 159.6362999998746,
+        "fps": 7.183506037992921
+      },
+      "model_inference": {
+        "mean_ms": 1490.0751600000149,
+        "median_ms": 1505.833249999796,
+        "p95_ms": 1665.1155999998082,
+        "fps": 0.671107086974049
+      },
+      "postprocessing": {
+        "mean_ms": 0.14665999997305335,
+        "median_ms": 0.14395000016520498,
+        "p95_ms": 0.20029999996040715,
+        "fps": 6818.491750877783
+      },
+      "end_to_end": {
+        "mean_ms": 1632.2400400000333,
+        "median_ms": 1657.3314500001288,
+        "p95_ms": 1797.7631000003385,
+        "fps": 0.6126549867015758
+      }
+    },
+    "benchmark_pytorch_cuda_canonical": {
+      "backend": {
+        "experiment_id": "F_final_fcos_tuned",
+        "model_version": "F_final_fcos_tuned-epoch-17",
+        "architecture": "FCOS ResNet50 FPN",
+        "image_size": 768,
+        "class_names": {
+          "0": "Impacted",
+          "1": "Caries",
+          "2": "Periapical Lesion",
+          "3": "Deep Caries"
+        },
+        "backend": "pytorch",
+        "artifact_path": "C:\\Users\\Eclipse\\PycharmProjects\\Dental-Xray-Pathology-Detection\\artifacts\\refinement\\fcos\\F_final_fcos_tuned\\best.pth",
+        "artifact_sha256": "ec4ee94b2bf7afcb77873fe4d26915bec2c7af71f09cd68353beb65561ca783d",
+        "runtime": "torch-2.11.0+cu128"
+      },
+      "iterations": 20,
+      "warmup_iterations": 5,
+      "execution_provider": [
+        "cuda:0"
+      ],
+      "threading": {
+        "onnx_intra_op_threads": "runtime_default",
+        "onnx_inter_op_threads": "runtime_default"
+      },
+      "preprocessing": {
+        "mean_ms": 189.05039500000385,
+        "median_ms": 165.93839999995907,
+        "p95_ms": 308.13639999996667,
+        "fps": 5.28959487230894
+      },
+      "model_inference": {
+        "mean_ms": 92.44668500009539,
+        "median_ms": 94.43495000004987,
+        "p95_ms": 108.01480000009178,
+        "fps": 10.817045521956446
+      },
+      "postprocessing": {
+        "mean_ms": 0.12360000009721261,
+        "median_ms": 0.13350000017453567,
+        "p95_ms": 0.14000000010128133,
+        "fps": 8090.6148803680435
+      },
+      "end_to_end": {
+        "mean_ms": 285.89775999994345,
+        "median_ms": 257.95919999973194,
+        "p95_ms": 418.5777999991842,
+        "fps": 3.4977538823675913
+      }
+    }
+  }
+}

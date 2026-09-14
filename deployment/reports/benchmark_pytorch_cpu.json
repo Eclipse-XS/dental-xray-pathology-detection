@@ -1,0 +1,31 @@
+{
+  "backend": {
+    "experiment_id": "F_final_fcos_tuned",
+    "model_version": "F_final_fcos_tuned-epoch-17",
+    "architecture": "FCOS ResNet50 FPN",
+    "image_size": 768,
+    "class_names": {
+      "0": "Impacted",
+      "1": "Caries",
+      "2": "Periapical Lesion",
+      "3": "Deep Caries"
+    },
+    "backend": "pytorch",
+    "artifact_path": "C:\\Users\\Eclipse\\PycharmProjects\\Dental-Xray-Pathology-Detection\\artifacts\\refinement\\fcos\\F_final_fcos_tuned\\best.pth",
+    "artifact_sha256": "ec4ee94b2bf7afcb77873fe4d26915bec2c7af71f09cd68353beb65561ca783d",
+    "runtime": "torch-2.11.0+cu128"
+  },
+  "iterations": 10,
+  "pure_inference": {
+    "mean_ms": 939.4356099999641,
+    "median_ms": 886.8929499999467,
+    "p95_ms": 1332.3687000001883,
+    "fps": 1.0644689102215725
+  },
+  "end_to_end_decode_and_inference": {
+    "mean_ms": 1152.8885099996842,
+    "median_ms": 1168.5790499996074,
+    "p95_ms": 1219.3919000001188,
+    "fps": 0.8673865610823669
+  }
+}

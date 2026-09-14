@@ -1,0 +1,7 @@
+{
+  "correct_detections": 222,
+  "classification_errors": 38,
+  "background_false_positives": 151,
+  "false_negatives_after_spatial_matching": 279,
+  "diagnostic_only": true
+}

@@ -1,0 +1,57 @@
+{
+  "model": "yolo26n.pt",
+  "pretrained": true,
+  "image_size": 640,
+  "configured_epochs": 20,
+  "completed_epochs": 20,
+  "best_epoch": 18,
+  "precision": 0.44538384308111884,
+  "recall": 0.47869697510688436,
+  "mAP@0.5": 0.4311744178197623,
+  "mAP@0.5:0.95": 0.2641114823623007,
+  "per_class": [
+    {
+      "class_id": 0,
+      "class_name": "Impacted",
+      "Precision": 0.7308396957795877,
+      "Recall": 0.9292929292929293,
+      "AP@0.5": 0.9128543295758536,
+      "AP@0.5:0.95": 0.56037527401756
+    },
+    {
+      "class_id": 1,
+      "class_name": "Caries",
+      "Precision": 0.3723639359852309,
+      "Recall": 0.49295774647887325,
+      "AP@0.5": 0.3738979122279051,
+      "AP@0.5:0.95": 0.25368751188073835
+    },
+    {
+      "class_id": 2,
+      "class_name": "Periapical Lesion",
+      "Precision": 0.31389317524671445,
+      "Recall": 0.0806173397543634,
+      "AP@0.5": 0.08109451050902756,
+      "AP@0.5:0.95": 0.043517392928259666
+    },
+    {
+      "class_id": 3,
+      "class_name": "Deep Caries",
+      "Precision": 0.3644385653129423,
+      "Recall": 0.4119198849013715,
+      "AP@0.5": 0.3568509189662631,
+      "AP@0.5:0.95": 0.19886575062264497
+    }
+  ],
+  "run_name": "yolo26n_640_seed42",
+  "checkpoint": {
+    "path": "C:\\Users\\Eclipse\\PycharmProjects\\Dental-Xray-Pathology-Detection\\artifacts\\baseline\\yolo26n_640_seed42\\weights\\best.pt",
+    "filename": "best.pt",
+    "size": 5365829,
+    "mtime_ns": 1788875822827546600,
+    "sha256": "604c0d499e9b8ce486ebc9c4fc6544251ac08a824454c9258ad8cc7431860344"
+  },
+  "best_checkpoint": "C:\\Users\\Eclipse\\PycharmProjects\\Dental-Xray-Pathology-Detection\\artifacts\\baseline\\yolo26n_640_seed42\\weights\\best.pt",
+  "final_epoch": 20,
+  "generated_at": "2026-09-08T14:37:49.640297+00:00"
+}

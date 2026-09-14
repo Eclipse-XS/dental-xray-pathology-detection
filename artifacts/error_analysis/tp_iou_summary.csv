@@ -1,0 +1,5 @@
+class_name,TP_count,median_TP_IoU
+Impacted,74,0.8076735138893127
+Caries,124,0.8479935824871063
+Periapical Lesion,2,0.85397869348526
+Deep Caries,22,0.8227101862430573

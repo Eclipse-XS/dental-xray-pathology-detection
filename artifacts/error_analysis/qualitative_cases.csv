@@ -1,0 +1,9 @@
+selection_reason,image_id,file_name,event_type,confidence,iou
+Strongest clean true-positive image,230,train_540.png,true_positive,0.6520874500274658,0.939958930015564
+Highest false-negative image,190,train_462.png,false_negative,0.34821370244026184,0.519783079624176
+Highest prediction-error image,266,train_26.png,classification_error,0.5877114534378052,0.8863056898117065
+Periapical false-negative,164,train_510.png,false_negative,0.6016950011253357,0.0
+Caries false-positive-heavy image,155,train_485.png,background_false_positive,0.5761573910713196,0.0
+Classification-error case,63,train_592.png,classification_error,0.661297619342804,0.8360013365745544
+Localization-error case,392,train_244.png,localization_error,0.5828198194503784,0.10153573006391525
+Small-object miss,63,train_592.png,false_negative,0.49677735567092896,0.5137848854064941

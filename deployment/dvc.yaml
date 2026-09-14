@@ -1,0 +1,8 @@
+stages:
+  verify_selected_artifacts:
+    cmd: python scripts/verify_artifacts.py
+    deps:
+      - scripts/verify_artifacts.py
+      - ../artifacts/refinement/fcos/selected_final_model.json
+      - ../artifacts/refinement/fcos/F_final_fcos_tuned/best.pth
+    always_changed: true
