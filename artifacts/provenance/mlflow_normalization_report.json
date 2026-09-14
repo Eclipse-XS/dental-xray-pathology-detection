@@ -1,0 +1,4092 @@
+{
+  "classification_counts": {
+    "augmentation_refinement": 3,
+    "backbone_refinement": 7,
+    "detr_architecture_screening": 2,
+    "faster_rcnn_architecture_screening": 1,
+    "fcos_architecture_screening": 1,
+    "final_selected_fcos": 1,
+    "fine_tuning_freezing_refinement": 4,
+    "gradient_clipping_refinement": 3,
+    "historical_yolo_baseline": 1,
+    "optimizer_learning_rate_refinement": 6,
+    "regularization_refinement": 5,
+    "resolution_refinement": 5,
+    "scheduler_refinement": 4,
+    "ssd_architecture_screening": 6
+  },
+  "correlation_counts": {
+    "PARTIAL": 8,
+    "SKIP": 5,
+    "VERIFIED": 36
+  },
+  "database": {
+    "backup_path": "C:\\Users\\Eclipse\\Documents\\Dental-Xray-Pathology-Detection-backups\\mlflow_pre_normalization_20260914_222825.db",
+    "backup_sha256": "8a13f1db11a280acb40fbd487677c6f961d67f749311102e503839820d5378ab",
+    "counts_after_normalization": {
+      "experiments": 2,
+      "failed_runs": 5,
+      "finished_runs": 44,
+      "latest_metrics": 1433,
+      "metrics": 11451,
+      "params": 936,
+      "runs": 49,
+      "tags": 596
+    },
+    "counts_before_current_invocation": {
+      "experiments": 2,
+      "failed_runs": 5,
+      "finished_runs": 44,
+      "latest_metrics": 1433,
+      "metrics": 11451,
+      "params": 936,
+      "runs": 49,
+      "tags": 596
+    },
+    "counts_before_normalization": {
+      "experiments": 2,
+      "failed_runs": 5,
+      "finished_runs": 44,
+      "latest_metrics": 1145,
+      "metrics": 11163,
+      "params": 936,
+      "runs": 49,
+      "tags": 488
+    },
+    "logical_diff_from_backup": {
+      "latest_metrics": {
+        "rows_added_or_modified": 288,
+        "rows_deleted_or_modified": 0
+      },
+      "metrics": {
+        "rows_added_or_modified": 288,
+        "rows_deleted_or_modified": 0
+      },
+      "tags": {
+        "rows_added_or_modified": 108,
+        "rows_deleted_or_modified": 0
+      }
+    },
+    "path": "artifacts/modeling/mlflow.db",
+    "sha256_after_normalization": "9a1825f66ebccc4a34d205a3ffe0473f98d13b1e5caf9dbf0dbf6c13643f63e0",
+    "sha256_before_current_invocation": "9a1825f66ebccc4a34d205a3ffe0473f98d13b1e5caf9dbf0dbf6c13643f63e0",
+    "sha256_before_normalization": "8a13f1db11a280acb40fbd487677c6f961d67f749311102e503839820d5378ab"
+  },
+  "dry_run_plan": [
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50_95",
+      "kind": "metric",
+      "run_id": "0f60d191a0e24bbf96dd10643fd44148",
+      "run_name": "A1_sgd_lr5e4",
+      "source": "refinement/fcos/A1_sgd_lr5e4/history.csv",
+      "value": 0.2471829205751419
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50",
+      "kind": "metric",
+      "run_id": "0f60d191a0e24bbf96dd10643fd44148",
+      "run_name": "A1_sgd_lr5e4",
+      "source": "refinement/fcos/A1_sgd_lr5e4/history.csv",
+      "value": 0.40467536449432373
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_mar100",
+      "kind": "metric",
+      "run_id": "0f60d191a0e24bbf96dd10643fd44148",
+      "run_name": "A1_sgd_lr5e4",
+      "source": "refinement/fcos/A1_sgd_lr5e4/history.csv",
+      "value": 0.6151190400123596
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/epoch",
+      "kind": "metric",
+      "run_id": "0f60d191a0e24bbf96dd10643fd44148",
+      "run_name": "A1_sgd_lr5e4",
+      "source": "refinement/fcos/A1_sgd_lr5e4/history.csv",
+      "value": 6.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50_95",
+      "kind": "metric",
+      "run_id": "0f60d191a0e24bbf96dd10643fd44148",
+      "run_name": "A1_sgd_lr5e4",
+      "source": "refinement/fcos/A1_sgd_lr5e4/history.csv",
+      "value": 0.2174142301082611
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50",
+      "kind": "metric",
+      "run_id": "0f60d191a0e24bbf96dd10643fd44148",
+      "run_name": "A1_sgd_lr5e4",
+      "source": "refinement/fcos/A1_sgd_lr5e4/history.csv",
+      "value": 0.3556312620639801
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_mar100",
+      "kind": "metric",
+      "run_id": "0f60d191a0e24bbf96dd10643fd44148",
+      "run_name": "A1_sgd_lr5e4",
+      "source": "refinement/fcos/A1_sgd_lr5e4/history.csv",
+      "value": 0.44962337613105774
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/epoch",
+      "kind": "metric",
+      "run_id": "0f60d191a0e24bbf96dd10643fd44148",
+      "run_name": "A1_sgd_lr5e4",
+      "source": "refinement/fcos/A1_sgd_lr5e4/history.csv",
+      "value": 20.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/version",
+      "kind": "tag",
+      "run_id": "0f60d191a0e24bbf96dd10643fd44148",
+      "run_name": "A1_sgd_lr5e4",
+      "source": "normalization policy version 1",
+      "value": "1"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/status",
+      "kind": "tag",
+      "run_id": "0f60d191a0e24bbf96dd10643fd44148",
+      "run_name": "A1_sgd_lr5e4",
+      "source": "normalization policy version 1",
+      "value": "verified"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/source",
+      "kind": "tag",
+      "run_id": "0f60d191a0e24bbf96dd10643fd44148",
+      "run_name": "A1_sgd_lr5e4",
+      "source": "normalization policy version 1",
+      "value": "project_artifacts"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50_95",
+      "kind": "metric",
+      "run_id": "81948cc272d846c693de9dd032d899cc",
+      "run_name": "A2_sgd_lr1e3",
+      "source": "refinement/fcos/A2_sgd_lr1e3/history.csv",
+      "value": 0.2544059753417969
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50",
+      "kind": "metric",
+      "run_id": "81948cc272d846c693de9dd032d899cc",
+      "run_name": "A2_sgd_lr1e3",
+      "source": "refinement/fcos/A2_sgd_lr1e3/history.csv",
+      "value": 0.41519680619239807
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_mar100",
+      "kind": "metric",
+      "run_id": "81948cc272d846c693de9dd032d899cc",
+      "run_name": "A2_sgd_lr1e3",
+      "source": "refinement/fcos/A2_sgd_lr1e3/history.csv",
+      "value": 0.6261323690414429
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/epoch",
+      "kind": "metric",
+      "run_id": "81948cc272d846c693de9dd032d899cc",
+      "run_name": "A2_sgd_lr1e3",
+      "source": "refinement/fcos/A2_sgd_lr1e3/history.csv",
+      "value": 5.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50_95",
+      "kind": "metric",
+      "run_id": "81948cc272d846c693de9dd032d899cc",
+      "run_name": "A2_sgd_lr1e3",
+      "source": "refinement/fcos/A2_sgd_lr1e3/history.csv",
+      "value": 0.22492165863513947
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50",
+      "kind": "metric",
+      "run_id": "81948cc272d846c693de9dd032d899cc",
+      "run_name": "A2_sgd_lr1e3",
+      "source": "refinement/fcos/A2_sgd_lr1e3/history.csv",
+      "value": 0.36262038350105286
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_mar100",
+      "kind": "metric",
+      "run_id": "81948cc272d846c693de9dd032d899cc",
+      "run_name": "A2_sgd_lr1e3",
+      "source": "refinement/fcos/A2_sgd_lr1e3/history.csv",
+      "value": 0.4567875862121582
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/epoch",
+      "kind": "metric",
+      "run_id": "81948cc272d846c693de9dd032d899cc",
+      "run_name": "A2_sgd_lr1e3",
+      "source": "refinement/fcos/A2_sgd_lr1e3/history.csv",
+      "value": 20.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/version",
+      "kind": "tag",
+      "run_id": "81948cc272d846c693de9dd032d899cc",
+      "run_name": "A2_sgd_lr1e3",
+      "source": "normalization policy version 1",
+      "value": "1"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/status",
+      "kind": "tag",
+      "run_id": "81948cc272d846c693de9dd032d899cc",
+      "run_name": "A2_sgd_lr1e3",
+      "source": "normalization policy version 1",
+      "value": "verified"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/source",
+      "kind": "tag",
+      "run_id": "81948cc272d846c693de9dd032d899cc",
+      "run_name": "A2_sgd_lr1e3",
+      "source": "normalization policy version 1",
+      "value": "project_artifacts"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50_95",
+      "kind": "metric",
+      "run_id": "6da7c19c450f4626a8de55ab7c3c7729",
+      "run_name": "A3_sgd_lr2e3",
+      "source": "refinement/fcos/A3_sgd_lr2e3/history.csv",
+      "value": 0.24551402032375336
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50",
+      "kind": "metric",
+      "run_id": "6da7c19c450f4626a8de55ab7c3c7729",
+      "run_name": "A3_sgd_lr2e3",
+      "source": "refinement/fcos/A3_sgd_lr2e3/history.csv",
+      "value": 0.39799705147743225
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_mar100",
+      "kind": "metric",
+      "run_id": "6da7c19c450f4626a8de55ab7c3c7729",
+      "run_name": "A3_sgd_lr2e3",
+      "source": "refinement/fcos/A3_sgd_lr2e3/history.csv",
+      "value": 0.5845862627029419
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/epoch",
+      "kind": "metric",
+      "run_id": "6da7c19c450f4626a8de55ab7c3c7729",
+      "run_name": "A3_sgd_lr2e3",
+      "source": "refinement/fcos/A3_sgd_lr2e3/history.csv",
+      "value": 8.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50_95",
+      "kind": "metric",
+      "run_id": "6da7c19c450f4626a8de55ab7c3c7729",
+      "run_name": "A3_sgd_lr2e3",
+      "source": "refinement/fcos/A3_sgd_lr2e3/history.csv",
+      "value": 0.21579724550247192
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50",
+      "kind": "metric",
+      "run_id": "6da7c19c450f4626a8de55ab7c3c7729",
+      "run_name": "A3_sgd_lr2e3",
+      "source": "refinement/fcos/A3_sgd_lr2e3/history.csv",
+      "value": 0.3431895673274994
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_mar100",
+      "kind": "metric",
+      "run_id": "6da7c19c450f4626a8de55ab7c3c7729",
+      "run_name": "A3_sgd_lr2e3",
+      "source": "refinement/fcos/A3_sgd_lr2e3/history.csv",
+      "value": 0.3658931851387024
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/epoch",
+      "kind": "metric",
+      "run_id": "6da7c19c450f4626a8de55ab7c3c7729",
+      "run_name": "A3_sgd_lr2e3",
+      "source": "refinement/fcos/A3_sgd_lr2e3/history.csv",
+      "value": 20.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/version",
+      "kind": "tag",
+      "run_id": "6da7c19c450f4626a8de55ab7c3c7729",
+      "run_name": "A3_sgd_lr2e3",
+      "source": "normalization policy version 1",
+      "value": "1"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/status",
+      "kind": "tag",
+      "run_id": "6da7c19c450f4626a8de55ab7c3c7729",
+      "run_name": "A3_sgd_lr2e3",
+      "source": "normalization policy version 1",
+      "value": "verified"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/source",
+      "kind": "tag",
+      "run_id": "6da7c19c450f4626a8de55ab7c3c7729",
+      "run_name": "A3_sgd_lr2e3",
+      "source": "normalization policy version 1",
+      "value": "project_artifacts"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50_95",
+      "kind": "metric",
+      "run_id": "c2a4a0bbb6284081af13a40b75b6200f",
+      "run_name": "A4_adamw_lr1e4",
+      "source": "refinement/fcos/A4_adamw_lr1e4/history.csv",
+      "value": 0.2557508647441864
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50",
+      "kind": "metric",
+      "run_id": "c2a4a0bbb6284081af13a40b75b6200f",
+      "run_name": "A4_adamw_lr1e4",
+      "source": "refinement/fcos/A4_adamw_lr1e4/history.csv",
+      "value": 0.42173829674720764
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_mar100",
+      "kind": "metric",
+      "run_id": "c2a4a0bbb6284081af13a40b75b6200f",
+      "run_name": "A4_adamw_lr1e4",
+      "source": "refinement/fcos/A4_adamw_lr1e4/history.csv",
+      "value": 0.6017411351203918
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/epoch",
+      "kind": "metric",
+      "run_id": "c2a4a0bbb6284081af13a40b75b6200f",
+      "run_name": "A4_adamw_lr1e4",
+      "source": "refinement/fcos/A4_adamw_lr1e4/history.csv",
+      "value": 6.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50_95",
+      "kind": "metric",
+      "run_id": "c2a4a0bbb6284081af13a40b75b6200f",
+      "run_name": "A4_adamw_lr1e4",
+      "source": "refinement/fcos/A4_adamw_lr1e4/history.csv",
+      "value": 0.1885526031255722
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50",
+      "kind": "metric",
+      "run_id": "c2a4a0bbb6284081af13a40b75b6200f",
+      "run_name": "A4_adamw_lr1e4",
+      "source": "refinement/fcos/A4_adamw_lr1e4/history.csv",
+      "value": 0.30542126297950745
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_mar100",
+      "kind": "metric",
+      "run_id": "c2a4a0bbb6284081af13a40b75b6200f",
+      "run_name": "A4_adamw_lr1e4",
+      "source": "refinement/fcos/A4_adamw_lr1e4/history.csv",
+      "value": 0.39687293767929077
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/epoch",
+      "kind": "metric",
+      "run_id": "c2a4a0bbb6284081af13a40b75b6200f",
+      "run_name": "A4_adamw_lr1e4",
+      "source": "refinement/fcos/A4_adamw_lr1e4/history.csv",
+      "value": 20.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/version",
+      "kind": "tag",
+      "run_id": "c2a4a0bbb6284081af13a40b75b6200f",
+      "run_name": "A4_adamw_lr1e4",
+      "source": "normalization policy version 1",
+      "value": "1"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/status",
+      "kind": "tag",
+      "run_id": "c2a4a0bbb6284081af13a40b75b6200f",
+      "run_name": "A4_adamw_lr1e4",
+      "source": "normalization policy version 1",
+      "value": "verified"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/source",
+      "kind": "tag",
+      "run_id": "c2a4a0bbb6284081af13a40b75b6200f",
+      "run_name": "A4_adamw_lr1e4",
+      "source": "normalization policy version 1",
+      "value": "project_artifacts"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50_95",
+      "kind": "metric",
+      "run_id": "235ce4f53dd546bdadabd595412927a8",
+      "run_name": "A5_adamw_lr3e4",
+      "source": "refinement/fcos/A5_adamw_lr3e4/history.csv",
+      "value": 0.20924077928066254
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50",
+      "kind": "metric",
+      "run_id": "235ce4f53dd546bdadabd595412927a8",
+      "run_name": "A5_adamw_lr3e4",
+      "source": "refinement/fcos/A5_adamw_lr3e4/history.csv",
+      "value": 0.34164780378341675
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_mar100",
+      "kind": "metric",
+      "run_id": "235ce4f53dd546bdadabd595412927a8",
+      "run_name": "A5_adamw_lr3e4",
+      "source": "refinement/fcos/A5_adamw_lr3e4/history.csv",
+      "value": 0.4535464644432068
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/epoch",
+      "kind": "metric",
+      "run_id": "235ce4f53dd546bdadabd595412927a8",
+      "run_name": "A5_adamw_lr3e4",
+      "source": "refinement/fcos/A5_adamw_lr3e4/history.csv",
+      "value": 18.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50_95",
+      "kind": "metric",
+      "run_id": "235ce4f53dd546bdadabd595412927a8",
+      "run_name": "A5_adamw_lr3e4",
+      "source": "refinement/fcos/A5_adamw_lr3e4/history.csv",
+      "value": 0.18918706476688385
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50",
+      "kind": "metric",
+      "run_id": "235ce4f53dd546bdadabd595412927a8",
+      "run_name": "A5_adamw_lr3e4",
+      "source": "refinement/fcos/A5_adamw_lr3e4/history.csv",
+      "value": 0.315534383058548
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_mar100",
+      "kind": "metric",
+      "run_id": "235ce4f53dd546bdadabd595412927a8",
+      "run_name": "A5_adamw_lr3e4",
+      "source": "refinement/fcos/A5_adamw_lr3e4/history.csv",
+      "value": 0.4234023094177246
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/epoch",
+      "kind": "metric",
+      "run_id": "235ce4f53dd546bdadabd595412927a8",
+      "run_name": "A5_adamw_lr3e4",
+      "source": "refinement/fcos/A5_adamw_lr3e4/history.csv",
+      "value": 20.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/version",
+      "kind": "tag",
+      "run_id": "235ce4f53dd546bdadabd595412927a8",
+      "run_name": "A5_adamw_lr3e4",
+      "source": "normalization policy version 1",
+      "value": "1"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/status",
+      "kind": "tag",
+      "run_id": "235ce4f53dd546bdadabd595412927a8",
+      "run_name": "A5_adamw_lr3e4",
+      "source": "normalization policy version 1",
+      "value": "verified"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/source",
+      "kind": "tag",
+      "run_id": "235ce4f53dd546bdadabd595412927a8",
+      "run_name": "A5_adamw_lr3e4",
+      "source": "normalization policy version 1",
+      "value": "project_artifacts"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50_95",
+      "kind": "metric",
+      "run_id": "abb00f3f661947afa8bda202c503d0a2",
+      "run_name": "A6_adamw_lr5e4",
+      "source": "refinement/fcos/A6_adamw_lr5e4/history.csv",
+      "value": 0.055065494030714035
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50",
+      "kind": "metric",
+      "run_id": "abb00f3f661947afa8bda202c503d0a2",
+      "run_name": "A6_adamw_lr5e4",
+      "source": "refinement/fcos/A6_adamw_lr5e4/history.csv",
+      "value": 0.1616649031639099
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_mar100",
+      "kind": "metric",
+      "run_id": "abb00f3f661947afa8bda202c503d0a2",
+      "run_name": "A6_adamw_lr5e4",
+      "source": "refinement/fcos/A6_adamw_lr5e4/history.csv",
+      "value": 0.29091474413871765
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/epoch",
+      "kind": "metric",
+      "run_id": "abb00f3f661947afa8bda202c503d0a2",
+      "run_name": "A6_adamw_lr5e4",
+      "source": "refinement/fcos/A6_adamw_lr5e4/history.csv",
+      "value": 13.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50_95",
+      "kind": "metric",
+      "run_id": "abb00f3f661947afa8bda202c503d0a2",
+      "run_name": "A6_adamw_lr5e4",
+      "source": "refinement/fcos/A6_adamw_lr5e4/history.csv",
+      "value": 0.039645690470933914
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50",
+      "kind": "metric",
+      "run_id": "abb00f3f661947afa8bda202c503d0a2",
+      "run_name": "A6_adamw_lr5e4",
+      "source": "refinement/fcos/A6_adamw_lr5e4/history.csv",
+      "value": 0.14071516692638397
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_mar100",
+      "kind": "metric",
+      "run_id": "abb00f3f661947afa8bda202c503d0a2",
+      "run_name": "A6_adamw_lr5e4",
+      "source": "refinement/fcos/A6_adamw_lr5e4/history.csv",
+      "value": 0.2515542805194855
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/epoch",
+      "kind": "metric",
+      "run_id": "abb00f3f661947afa8bda202c503d0a2",
+      "run_name": "A6_adamw_lr5e4",
+      "source": "refinement/fcos/A6_adamw_lr5e4/history.csv",
+      "value": 20.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/version",
+      "kind": "tag",
+      "run_id": "abb00f3f661947afa8bda202c503d0a2",
+      "run_name": "A6_adamw_lr5e4",
+      "source": "normalization policy version 1",
+      "value": "1"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/status",
+      "kind": "tag",
+      "run_id": "abb00f3f661947afa8bda202c503d0a2",
+      "run_name": "A6_adamw_lr5e4",
+      "source": "normalization policy version 1",
+      "value": "verified"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/source",
+      "kind": "tag",
+      "run_id": "abb00f3f661947afa8bda202c503d0a2",
+      "run_name": "A6_adamw_lr5e4",
+      "source": "normalization policy version 1",
+      "value": "project_artifacts"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50_95",
+      "kind": "metric",
+      "run_id": "e0894bc6f7ce49f1930d0788e2097afd",
+      "run_name": "B1_fixed",
+      "source": "refinement/fcos/B1_fixed/history.csv",
+      "value": 0.26705965399742126
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50",
+      "kind": "metric",
+      "run_id": "e0894bc6f7ce49f1930d0788e2097afd",
+      "run_name": "B1_fixed",
+      "source": "refinement/fcos/B1_fixed/history.csv",
+      "value": 0.41971972584724426
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_mar100",
+      "kind": "metric",
+      "run_id": "e0894bc6f7ce49f1930d0788e2097afd",
+      "run_name": "B1_fixed",
+      "source": "refinement/fcos/B1_fixed/history.csv",
+      "value": 0.6081072688102722
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/epoch",
+      "kind": "metric",
+      "run_id": "e0894bc6f7ce49f1930d0788e2097afd",
+      "run_name": "B1_fixed",
+      "source": "refinement/fcos/B1_fixed/history.csv",
+      "value": 5.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50_95",
+      "kind": "metric",
+      "run_id": "e0894bc6f7ce49f1930d0788e2097afd",
+      "run_name": "B1_fixed",
+      "source": "refinement/fcos/B1_fixed/history.csv",
+      "value": 0.18338148295879364
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50",
+      "kind": "metric",
+      "run_id": "e0894bc6f7ce49f1930d0788e2097afd",
+      "run_name": "B1_fixed",
+      "source": "refinement/fcos/B1_fixed/history.csv",
+      "value": 0.30235931277275085
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_mar100",
+      "kind": "metric",
+      "run_id": "e0894bc6f7ce49f1930d0788e2097afd",
+      "run_name": "B1_fixed",
+      "source": "refinement/fcos/B1_fixed/history.csv",
+      "value": 0.3352370262145996
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/epoch",
+      "kind": "metric",
+      "run_id": "e0894bc6f7ce49f1930d0788e2097afd",
+      "run_name": "B1_fixed",
+      "source": "refinement/fcos/B1_fixed/history.csv",
+      "value": 20.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/version",
+      "kind": "tag",
+      "run_id": "e0894bc6f7ce49f1930d0788e2097afd",
+      "run_name": "B1_fixed",
+      "source": "normalization policy version 1",
+      "value": "1"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/status",
+      "kind": "tag",
+      "run_id": "e0894bc6f7ce49f1930d0788e2097afd",
+      "run_name": "B1_fixed",
+      "source": "normalization policy version 1",
+      "value": "verified"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/source",
+      "kind": "tag",
+      "run_id": "e0894bc6f7ce49f1930d0788e2097afd",
+      "run_name": "B1_fixed",
+      "source": "normalization policy version 1",
+      "value": "project_artifacts"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50_95",
+      "kind": "metric",
+      "run_id": "88776f896dd54efd8bc4b2324400762a",
+      "run_name": "B2_cosine",
+      "source": "refinement/fcos/B2_cosine/history.csv",
+      "value": 0.2548362612724304
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50",
+      "kind": "metric",
+      "run_id": "88776f896dd54efd8bc4b2324400762a",
+      "run_name": "B2_cosine",
+      "source": "refinement/fcos/B2_cosine/history.csv",
+      "value": 0.4025071859359741
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_mar100",
+      "kind": "metric",
+      "run_id": "88776f896dd54efd8bc4b2324400762a",
+      "run_name": "B2_cosine",
+      "source": "refinement/fcos/B2_cosine/history.csv",
+      "value": 0.6072460412979126
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/epoch",
+      "kind": "metric",
+      "run_id": "88776f896dd54efd8bc4b2324400762a",
+      "run_name": "B2_cosine",
+      "source": "refinement/fcos/B2_cosine/history.csv",
+      "value": 6.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50_95",
+      "kind": "metric",
+      "run_id": "88776f896dd54efd8bc4b2324400762a",
+      "run_name": "B2_cosine",
+      "source": "refinement/fcos/B2_cosine/history.csv",
+      "value": 0.2299502044916153
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50",
+      "kind": "metric",
+      "run_id": "88776f896dd54efd8bc4b2324400762a",
+      "run_name": "B2_cosine",
+      "source": "refinement/fcos/B2_cosine/history.csv",
+      "value": 0.36171451210975647
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_mar100",
+      "kind": "metric",
+      "run_id": "88776f896dd54efd8bc4b2324400762a",
+      "run_name": "B2_cosine",
+      "source": "refinement/fcos/B2_cosine/history.csv",
+      "value": 0.37939947843551636
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/epoch",
+      "kind": "metric",
+      "run_id": "88776f896dd54efd8bc4b2324400762a",
+      "run_name": "B2_cosine",
+      "source": "refinement/fcos/B2_cosine/history.csv",
+      "value": 20.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/version",
+      "kind": "tag",
+      "run_id": "88776f896dd54efd8bc4b2324400762a",
+      "run_name": "B2_cosine",
+      "source": "normalization policy version 1",
+      "value": "1"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/status",
+      "kind": "tag",
+      "run_id": "88776f896dd54efd8bc4b2324400762a",
+      "run_name": "B2_cosine",
+      "source": "normalization policy version 1",
+      "value": "verified"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/source",
+      "kind": "tag",
+      "run_id": "88776f896dd54efd8bc4b2324400762a",
+      "run_name": "B2_cosine",
+      "source": "normalization policy version 1",
+      "value": "project_artifacts"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50_95",
+      "kind": "metric",
+      "run_id": "e5110163acec47e6ac3f03aa62ecf6dd",
+      "run_name": "B3_cosine_warmup",
+      "source": "refinement/fcos/B3_cosine_warmup/history.csv",
+      "value": 0.2892681658267975
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50",
+      "kind": "metric",
+      "run_id": "e5110163acec47e6ac3f03aa62ecf6dd",
+      "run_name": "B3_cosine_warmup",
+      "source": "refinement/fcos/B3_cosine_warmup/history.csv",
+      "value": 0.4632343351840973
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_mar100",
+      "kind": "metric",
+      "run_id": "e5110163acec47e6ac3f03aa62ecf6dd",
+      "run_name": "B3_cosine_warmup",
+      "source": "refinement/fcos/B3_cosine_warmup/history.csv",
+      "value": 0.630008339881897
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/epoch",
+      "kind": "metric",
+      "run_id": "e5110163acec47e6ac3f03aa62ecf6dd",
+      "run_name": "B3_cosine_warmup",
+      "source": "refinement/fcos/B3_cosine_warmup/history.csv",
+      "value": 6.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50_95",
+      "kind": "metric",
+      "run_id": "e5110163acec47e6ac3f03aa62ecf6dd",
+      "run_name": "B3_cosine_warmup",
+      "source": "refinement/fcos/B3_cosine_warmup/history.csv",
+      "value": 0.24585360288619995
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50",
+      "kind": "metric",
+      "run_id": "e5110163acec47e6ac3f03aa62ecf6dd",
+      "run_name": "B3_cosine_warmup",
+      "source": "refinement/fcos/B3_cosine_warmup/history.csv",
+      "value": 0.37862250208854675
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_mar100",
+      "kind": "metric",
+      "run_id": "e5110163acec47e6ac3f03aa62ecf6dd",
+      "run_name": "B3_cosine_warmup",
+      "source": "refinement/fcos/B3_cosine_warmup/history.csv",
+      "value": 0.37462228536605835
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/epoch",
+      "kind": "metric",
+      "run_id": "e5110163acec47e6ac3f03aa62ecf6dd",
+      "run_name": "B3_cosine_warmup",
+      "source": "refinement/fcos/B3_cosine_warmup/history.csv",
+      "value": 20.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/version",
+      "kind": "tag",
+      "run_id": "e5110163acec47e6ac3f03aa62ecf6dd",
+      "run_name": "B3_cosine_warmup",
+      "source": "normalization policy version 1",
+      "value": "1"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/status",
+      "kind": "tag",
+      "run_id": "e5110163acec47e6ac3f03aa62ecf6dd",
+      "run_name": "B3_cosine_warmup",
+      "source": "normalization policy version 1",
+      "value": "verified"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/source",
+      "kind": "tag",
+      "run_id": "e5110163acec47e6ac3f03aa62ecf6dd",
+      "run_name": "B3_cosine_warmup",
+      "source": "normalization policy version 1",
+      "value": "project_artifacts"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50_95",
+      "kind": "metric",
+      "run_id": "ad0b01eca8774f50bc2388063b53133d",
+      "run_name": "B4_plateau",
+      "source": "refinement/fcos/B4_plateau/history.csv",
+      "value": 0.27042561769485474
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50",
+      "kind": "metric",
+      "run_id": "ad0b01eca8774f50bc2388063b53133d",
+      "run_name": "B4_plateau",
+      "source": "refinement/fcos/B4_plateau/history.csv",
+      "value": 0.4308730363845825
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_mar100",
+      "kind": "metric",
+      "run_id": "ad0b01eca8774f50bc2388063b53133d",
+      "run_name": "B4_plateau",
+      "source": "refinement/fcos/B4_plateau/history.csv",
+      "value": 0.6244354248046875
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/epoch",
+      "kind": "metric",
+      "run_id": "ad0b01eca8774f50bc2388063b53133d",
+      "run_name": "B4_plateau",
+      "source": "refinement/fcos/B4_plateau/history.csv",
+      "value": 8.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50_95",
+      "kind": "metric",
+      "run_id": "ad0b01eca8774f50bc2388063b53133d",
+      "run_name": "B4_plateau",
+      "source": "refinement/fcos/B4_plateau/history.csv",
+      "value": 0.23153802752494812
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50",
+      "kind": "metric",
+      "run_id": "ad0b01eca8774f50bc2388063b53133d",
+      "run_name": "B4_plateau",
+      "source": "refinement/fcos/B4_plateau/history.csv",
+      "value": 0.3683640956878662
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_mar100",
+      "kind": "metric",
+      "run_id": "ad0b01eca8774f50bc2388063b53133d",
+      "run_name": "B4_plateau",
+      "source": "refinement/fcos/B4_plateau/history.csv",
+      "value": 0.37753382325172424
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/epoch",
+      "kind": "metric",
+      "run_id": "ad0b01eca8774f50bc2388063b53133d",
+      "run_name": "B4_plateau",
+      "source": "refinement/fcos/B4_plateau/history.csv",
+      "value": 20.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/version",
+      "kind": "tag",
+      "run_id": "ad0b01eca8774f50bc2388063b53133d",
+      "run_name": "B4_plateau",
+      "source": "normalization policy version 1",
+      "value": "1"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/status",
+      "kind": "tag",
+      "run_id": "ad0b01eca8774f50bc2388063b53133d",
+      "run_name": "B4_plateau",
+      "source": "normalization policy version 1",
+      "value": "verified"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/source",
+      "kind": "tag",
+      "run_id": "ad0b01eca8774f50bc2388063b53133d",
+      "run_name": "B4_plateau",
+      "source": "normalization policy version 1",
+      "value": "project_artifacts"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50_95",
+      "kind": "metric",
+      "run_id": "18d31de9ad66422bb2b74180be345afb",
+      "run_name": "C1_light_aug",
+      "source": "refinement/fcos/C1_light_aug/history.csv",
+      "value": 0.25403621792793274
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50",
+      "kind": "metric",
+      "run_id": "18d31de9ad66422bb2b74180be345afb",
+      "run_name": "C1_light_aug",
+      "source": "refinement/fcos/C1_light_aug/history.csv",
+      "value": 0.5008769631385803
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_mar100",
+      "kind": "metric",
+      "run_id": "18d31de9ad66422bb2b74180be345afb",
+      "run_name": "C1_light_aug",
+      "source": "refinement/fcos/C1_light_aug/history.csv",
+      "value": 0.4876877963542938
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/epoch",
+      "kind": "metric",
+      "run_id": "18d31de9ad66422bb2b74180be345afb",
+      "run_name": "C1_light_aug",
+      "source": "refinement/fcos/C1_light_aug/history.csv",
+      "value": 19.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50_95",
+      "kind": "metric",
+      "run_id": "18d31de9ad66422bb2b74180be345afb",
+      "run_name": "C1_light_aug",
+      "source": "refinement/fcos/C1_light_aug/history.csv",
+      "value": 0.25138771533966064
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50",
+      "kind": "metric",
+      "run_id": "18d31de9ad66422bb2b74180be345afb",
+      "run_name": "C1_light_aug",
+      "source": "refinement/fcos/C1_light_aug/history.csv",
+      "value": 0.4943273365497589
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_mar100",
+      "kind": "metric",
+      "run_id": "18d31de9ad66422bb2b74180be345afb",
+      "run_name": "C1_light_aug",
+      "source": "refinement/fcos/C1_light_aug/history.csv",
+      "value": 0.47604504227638245
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/epoch",
+      "kind": "metric",
+      "run_id": "18d31de9ad66422bb2b74180be345afb",
+      "run_name": "C1_light_aug",
+      "source": "refinement/fcos/C1_light_aug/history.csv",
+      "value": 20.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/version",
+      "kind": "tag",
+      "run_id": "18d31de9ad66422bb2b74180be345afb",
+      "run_name": "C1_light_aug",
+      "source": "normalization policy version 1",
+      "value": "1"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/status",
+      "kind": "tag",
+      "run_id": "18d31de9ad66422bb2b74180be345afb",
+      "run_name": "C1_light_aug",
+      "source": "normalization policy version 1",
+      "value": "verified"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/source",
+      "kind": "tag",
+      "run_id": "18d31de9ad66422bb2b74180be345afb",
+      "run_name": "C1_light_aug",
+      "source": "normalization policy version 1",
+      "value": "project_artifacts"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50_95",
+      "kind": "metric",
+      "run_id": "0345c727804b4547bc7661d4c1657276",
+      "run_name": "C2_medium_aug",
+      "source": "refinement/fcos/C2_medium_aug/history.csv",
+      "value": 0.20489516854286194
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50",
+      "kind": "metric",
+      "run_id": "0345c727804b4547bc7661d4c1657276",
+      "run_name": "C2_medium_aug",
+      "source": "refinement/fcos/C2_medium_aug/history.csv",
+      "value": 0.4292032718658447
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_mar100",
+      "kind": "metric",
+      "run_id": "0345c727804b4547bc7661d4c1657276",
+      "run_name": "C2_medium_aug",
+      "source": "refinement/fcos/C2_medium_aug/history.csv",
+      "value": 0.4846206307411194
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/epoch",
+      "kind": "metric",
+      "run_id": "0345c727804b4547bc7661d4c1657276",
+      "run_name": "C2_medium_aug",
+      "source": "refinement/fcos/C2_medium_aug/history.csv",
+      "value": 19.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50_95",
+      "kind": "metric",
+      "run_id": "0345c727804b4547bc7661d4c1657276",
+      "run_name": "C2_medium_aug",
+      "source": "refinement/fcos/C2_medium_aug/history.csv",
+      "value": 0.20218035578727722
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50",
+      "kind": "metric",
+      "run_id": "0345c727804b4547bc7661d4c1657276",
+      "run_name": "C2_medium_aug",
+      "source": "refinement/fcos/C2_medium_aug/history.csv",
+      "value": 0.43441495299339294
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_mar100",
+      "kind": "metric",
+      "run_id": "0345c727804b4547bc7661d4c1657276",
+      "run_name": "C2_medium_aug",
+      "source": "refinement/fcos/C2_medium_aug/history.csv",
+      "value": 0.47492697834968567
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/epoch",
+      "kind": "metric",
+      "run_id": "0345c727804b4547bc7661d4c1657276",
+      "run_name": "C2_medium_aug",
+      "source": "refinement/fcos/C2_medium_aug/history.csv",
+      "value": 20.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/version",
+      "kind": "tag",
+      "run_id": "0345c727804b4547bc7661d4c1657276",
+      "run_name": "C2_medium_aug",
+      "source": "normalization policy version 1",
+      "value": "1"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/status",
+      "kind": "tag",
+      "run_id": "0345c727804b4547bc7661d4c1657276",
+      "run_name": "C2_medium_aug",
+      "source": "normalization policy version 1",
+      "value": "verified"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/source",
+      "kind": "tag",
+      "run_id": "0345c727804b4547bc7661d4c1657276",
+      "run_name": "C2_medium_aug",
+      "source": "normalization policy version 1",
+      "value": "project_artifacts"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50_95",
+      "kind": "metric",
+      "run_id": "59fd38b0baa3404a814b5467ead9c247",
+      "run_name": "C3_strong_aug",
+      "source": "refinement/fcos/C3_strong_aug/history.csv",
+      "value": 0.0598001629114151
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50",
+      "kind": "metric",
+      "run_id": "59fd38b0baa3404a814b5467ead9c247",
+      "run_name": "C3_strong_aug",
+      "source": "refinement/fcos/C3_strong_aug/history.csv",
+      "value": 0.1843772530555725
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_mar100",
+      "kind": "metric",
+      "run_id": "59fd38b0baa3404a814b5467ead9c247",
+      "run_name": "C3_strong_aug",
+      "source": "refinement/fcos/C3_strong_aug/history.csv",
+      "value": 0.3528980314731598
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/epoch",
+      "kind": "metric",
+      "run_id": "59fd38b0baa3404a814b5467ead9c247",
+      "run_name": "C3_strong_aug",
+      "source": "refinement/fcos/C3_strong_aug/history.csv",
+      "value": 20.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50_95",
+      "kind": "metric",
+      "run_id": "59fd38b0baa3404a814b5467ead9c247",
+      "run_name": "C3_strong_aug",
+      "source": "refinement/fcos/C3_strong_aug/history.csv",
+      "value": 0.0598001629114151
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50",
+      "kind": "metric",
+      "run_id": "59fd38b0baa3404a814b5467ead9c247",
+      "run_name": "C3_strong_aug",
+      "source": "refinement/fcos/C3_strong_aug/history.csv",
+      "value": 0.1843772530555725
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_mar100",
+      "kind": "metric",
+      "run_id": "59fd38b0baa3404a814b5467ead9c247",
+      "run_name": "C3_strong_aug",
+      "source": "refinement/fcos/C3_strong_aug/history.csv",
+      "value": 0.3528980314731598
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/epoch",
+      "kind": "metric",
+      "run_id": "59fd38b0baa3404a814b5467ead9c247",
+      "run_name": "C3_strong_aug",
+      "source": "refinement/fcos/C3_strong_aug/history.csv",
+      "value": 20.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/version",
+      "kind": "tag",
+      "run_id": "59fd38b0baa3404a814b5467ead9c247",
+      "run_name": "C3_strong_aug",
+      "source": "normalization policy version 1",
+      "value": "1"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/status",
+      "kind": "tag",
+      "run_id": "59fd38b0baa3404a814b5467ead9c247",
+      "run_name": "C3_strong_aug",
+      "source": "normalization policy version 1",
+      "value": "verified"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/source",
+      "kind": "tag",
+      "run_id": "59fd38b0baa3404a814b5467ead9c247",
+      "run_name": "C3_strong_aug",
+      "source": "normalization policy version 1",
+      "value": "project_artifacts"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50_95",
+      "kind": "metric",
+      "run_id": "558bc03b3d3748a497746a7cad605bfd",
+      "run_name": "D1_resnet34_proxy",
+      "source": "refinement/fcos/D1_resnet34_proxy/history.csv",
+      "value": 0.20384681224822998
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50",
+      "kind": "metric",
+      "run_id": "558bc03b3d3748a497746a7cad605bfd",
+      "run_name": "D1_resnet34_proxy",
+      "source": "refinement/fcos/D1_resnet34_proxy/history.csv",
+      "value": 0.37925055623054504
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_mar100",
+      "kind": "metric",
+      "run_id": "558bc03b3d3748a497746a7cad605bfd",
+      "run_name": "D1_resnet34_proxy",
+      "source": "refinement/fcos/D1_resnet34_proxy/history.csv",
+      "value": 0.4283618628978729
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/epoch",
+      "kind": "metric",
+      "run_id": "558bc03b3d3748a497746a7cad605bfd",
+      "run_name": "D1_resnet34_proxy",
+      "source": "refinement/fcos/D1_resnet34_proxy/history.csv",
+      "value": 10.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50_95",
+      "kind": "metric",
+      "run_id": "558bc03b3d3748a497746a7cad605bfd",
+      "run_name": "D1_resnet34_proxy",
+      "source": "refinement/fcos/D1_resnet34_proxy/history.csv",
+      "value": 0.20384681224822998
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50",
+      "kind": "metric",
+      "run_id": "558bc03b3d3748a497746a7cad605bfd",
+      "run_name": "D1_resnet34_proxy",
+      "source": "refinement/fcos/D1_resnet34_proxy/history.csv",
+      "value": 0.37925055623054504
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_mar100",
+      "kind": "metric",
+      "run_id": "558bc03b3d3748a497746a7cad605bfd",
+      "run_name": "D1_resnet34_proxy",
+      "source": "refinement/fcos/D1_resnet34_proxy/history.csv",
+      "value": 0.4283618628978729
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/epoch",
+      "kind": "metric",
+      "run_id": "558bc03b3d3748a497746a7cad605bfd",
+      "run_name": "D1_resnet34_proxy",
+      "source": "refinement/fcos/D1_resnet34_proxy/history.csv",
+      "value": 10.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/version",
+      "kind": "tag",
+      "run_id": "558bc03b3d3748a497746a7cad605bfd",
+      "run_name": "D1_resnet34_proxy",
+      "source": "normalization policy version 1",
+      "value": "1"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/status",
+      "kind": "tag",
+      "run_id": "558bc03b3d3748a497746a7cad605bfd",
+      "run_name": "D1_resnet34_proxy",
+      "source": "normalization policy version 1",
+      "value": "verified"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/source",
+      "kind": "tag",
+      "run_id": "558bc03b3d3748a497746a7cad605bfd",
+      "run_name": "D1_resnet34_proxy",
+      "source": "normalization policy version 1",
+      "value": "project_artifacts"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50_95",
+      "kind": "metric",
+      "run_id": "b64d675a31fa4119969ffdc8e390afc0",
+      "run_name": "D2_resnet50_proxy",
+      "source": "refinement/fcos/D2_resnet50_proxy/history.csv",
+      "value": 0.2492826133966446
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50",
+      "kind": "metric",
+      "run_id": "b64d675a31fa4119969ffdc8e390afc0",
+      "run_name": "D2_resnet50_proxy",
+      "source": "refinement/fcos/D2_resnet50_proxy/history.csv",
+      "value": 0.43540528416633606
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_mar100",
+      "kind": "metric",
+      "run_id": "b64d675a31fa4119969ffdc8e390afc0",
+      "run_name": "D2_resnet50_proxy",
+      "source": "refinement/fcos/D2_resnet50_proxy/history.csv",
+      "value": 0.534492015838623
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/epoch",
+      "kind": "metric",
+      "run_id": "b64d675a31fa4119969ffdc8e390afc0",
+      "run_name": "D2_resnet50_proxy",
+      "source": "refinement/fcos/D2_resnet50_proxy/history.csv",
+      "value": 9.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50_95",
+      "kind": "metric",
+      "run_id": "b64d675a31fa4119969ffdc8e390afc0",
+      "run_name": "D2_resnet50_proxy",
+      "source": "refinement/fcos/D2_resnet50_proxy/history.csv",
+      "value": 0.24920444190502167
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50",
+      "kind": "metric",
+      "run_id": "b64d675a31fa4119969ffdc8e390afc0",
+      "run_name": "D2_resnet50_proxy",
+      "source": "refinement/fcos/D2_resnet50_proxy/history.csv",
+      "value": 0.4416418671607971
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_mar100",
+      "kind": "metric",
+      "run_id": "b64d675a31fa4119969ffdc8e390afc0",
+      "run_name": "D2_resnet50_proxy",
+      "source": "refinement/fcos/D2_resnet50_proxy/history.csv",
+      "value": 0.5425294637680054
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/epoch",
+      "kind": "metric",
+      "run_id": "b64d675a31fa4119969ffdc8e390afc0",
+      "run_name": "D2_resnet50_proxy",
+      "source": "refinement/fcos/D2_resnet50_proxy/history.csv",
+      "value": 10.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/version",
+      "kind": "tag",
+      "run_id": "b64d675a31fa4119969ffdc8e390afc0",
+      "run_name": "D2_resnet50_proxy",
+      "source": "normalization policy version 1",
+      "value": "1"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/status",
+      "kind": "tag",
+      "run_id": "b64d675a31fa4119969ffdc8e390afc0",
+      "run_name": "D2_resnet50_proxy",
+      "source": "normalization policy version 1",
+      "value": "verified"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/source",
+      "kind": "tag",
+      "run_id": "b64d675a31fa4119969ffdc8e390afc0",
+      "run_name": "D2_resnet50_proxy",
+      "source": "normalization policy version 1",
+      "value": "project_artifacts"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50_95",
+      "kind": "metric",
+      "run_id": "74b8859910454badbea264dd7769b52f",
+      "run_name": "D3_resnet101_proxy",
+      "source": "refinement/fcos/D3_resnet101_proxy/history.csv",
+      "value": 0.2204260379076004
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50",
+      "kind": "metric",
+      "run_id": "74b8859910454badbea264dd7769b52f",
+      "run_name": "D3_resnet101_proxy",
+      "source": "refinement/fcos/D3_resnet101_proxy/history.csv",
+      "value": 0.40738657116889954
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_mar100",
+      "kind": "metric",
+      "run_id": "74b8859910454badbea264dd7769b52f",
+      "run_name": "D3_resnet101_proxy",
+      "source": "refinement/fcos/D3_resnet101_proxy/history.csv",
+      "value": 0.45885974168777466
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/epoch",
+      "kind": "metric",
+      "run_id": "74b8859910454badbea264dd7769b52f",
+      "run_name": "D3_resnet101_proxy",
+      "source": "refinement/fcos/D3_resnet101_proxy/history.csv",
+      "value": 10.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50_95",
+      "kind": "metric",
+      "run_id": "74b8859910454badbea264dd7769b52f",
+      "run_name": "D3_resnet101_proxy",
+      "source": "refinement/fcos/D3_resnet101_proxy/history.csv",
+      "value": 0.2204260379076004
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50",
+      "kind": "metric",
+      "run_id": "74b8859910454badbea264dd7769b52f",
+      "run_name": "D3_resnet101_proxy",
+      "source": "refinement/fcos/D3_resnet101_proxy/history.csv",
+      "value": 0.40738657116889954
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_mar100",
+      "kind": "metric",
+      "run_id": "74b8859910454badbea264dd7769b52f",
+      "run_name": "D3_resnet101_proxy",
+      "source": "refinement/fcos/D3_resnet101_proxy/history.csv",
+      "value": 0.45885974168777466
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/epoch",
+      "kind": "metric",
+      "run_id": "74b8859910454badbea264dd7769b52f",
+      "run_name": "D3_resnet101_proxy",
+      "source": "refinement/fcos/D3_resnet101_proxy/history.csv",
+      "value": 10.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/version",
+      "kind": "tag",
+      "run_id": "74b8859910454badbea264dd7769b52f",
+      "run_name": "D3_resnet101_proxy",
+      "source": "normalization policy version 1",
+      "value": "1"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/status",
+      "kind": "tag",
+      "run_id": "74b8859910454badbea264dd7769b52f",
+      "run_name": "D3_resnet101_proxy",
+      "source": "normalization policy version 1",
+      "value": "verified"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/source",
+      "kind": "tag",
+      "run_id": "74b8859910454badbea264dd7769b52f",
+      "run_name": "D3_resnet101_proxy",
+      "source": "normalization policy version 1",
+      "value": "project_artifacts"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50_95",
+      "kind": "metric",
+      "run_id": "ba74e2dd1f0949918294548bb887badf",
+      "run_name": "D4_resnet50_confirm_fixed",
+      "source": "refinement/fcos/D4_resnet50_confirm_fixed/history.csv",
+      "value": 0.272744357585907
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50",
+      "kind": "metric",
+      "run_id": "ba74e2dd1f0949918294548bb887badf",
+      "run_name": "D4_resnet50_confirm_fixed",
+      "source": "refinement/fcos/D4_resnet50_confirm_fixed/history.csv",
+      "value": 0.4641017019748688
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_mar100",
+      "kind": "metric",
+      "run_id": "ba74e2dd1f0949918294548bb887badf",
+      "run_name": "D4_resnet50_confirm_fixed",
+      "source": "refinement/fcos/D4_resnet50_confirm_fixed/history.csv",
+      "value": 0.538372814655304
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/epoch",
+      "kind": "metric",
+      "run_id": "ba74e2dd1f0949918294548bb887badf",
+      "run_name": "D4_resnet50_confirm_fixed",
+      "source": "refinement/fcos/D4_resnet50_confirm_fixed/history.csv",
+      "value": 13.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50_95",
+      "kind": "metric",
+      "run_id": "ba74e2dd1f0949918294548bb887badf",
+      "run_name": "D4_resnet50_confirm_fixed",
+      "source": "refinement/fcos/D4_resnet50_confirm_fixed/history.csv",
+      "value": 0.2717782258987427
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50",
+      "kind": "metric",
+      "run_id": "ba74e2dd1f0949918294548bb887badf",
+      "run_name": "D4_resnet50_confirm_fixed",
+      "source": "refinement/fcos/D4_resnet50_confirm_fixed/history.csv",
+      "value": 0.45058879256248474
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_mar100",
+      "kind": "metric",
+      "run_id": "ba74e2dd1f0949918294548bb887badf",
+      "run_name": "D4_resnet50_confirm_fixed",
+      "source": "refinement/fcos/D4_resnet50_confirm_fixed/history.csv",
+      "value": 0.5221875309944153
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/epoch",
+      "kind": "metric",
+      "run_id": "ba74e2dd1f0949918294548bb887badf",
+      "run_name": "D4_resnet50_confirm_fixed",
+      "source": "refinement/fcos/D4_resnet50_confirm_fixed/history.csv",
+      "value": 19.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/version",
+      "kind": "tag",
+      "run_id": "ba74e2dd1f0949918294548bb887badf",
+      "run_name": "D4_resnet50_confirm_fixed",
+      "source": "normalization policy version 1",
+      "value": "1"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/status",
+      "kind": "tag",
+      "run_id": "ba74e2dd1f0949918294548bb887badf",
+      "run_name": "D4_resnet50_confirm_fixed",
+      "source": "normalization policy version 1",
+      "value": "verified"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/source",
+      "kind": "tag",
+      "run_id": "ba74e2dd1f0949918294548bb887badf",
+      "run_name": "D4_resnet50_confirm_fixed",
+      "source": "normalization policy version 1",
+      "value": "project_artifacts"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50_95",
+      "kind": "metric",
+      "run_id": "55afb336b2e1414da584d89aed371d25",
+      "run_name": "D4_top1_confirm",
+      "source": "refinement/fcos/D4_top1_confirm/history.csv",
+      "value": 0.147663414478302
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50",
+      "kind": "metric",
+      "run_id": "55afb336b2e1414da584d89aed371d25",
+      "run_name": "D4_top1_confirm",
+      "source": "refinement/fcos/D4_top1_confirm/history.csv",
+      "value": 0.26248353719711304
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_mar100",
+      "kind": "metric",
+      "run_id": "55afb336b2e1414da584d89aed371d25",
+      "run_name": "D4_top1_confirm",
+      "source": "refinement/fcos/D4_top1_confirm/history.csv",
+      "value": 0.380677193403244
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/epoch",
+      "kind": "metric",
+      "run_id": "55afb336b2e1414da584d89aed371d25",
+      "run_name": "D4_top1_confirm",
+      "source": "refinement/fcos/D4_top1_confirm/history.csv",
+      "value": 1.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50_95",
+      "kind": "metric",
+      "run_id": "55afb336b2e1414da584d89aed371d25",
+      "run_name": "D4_top1_confirm",
+      "source": "refinement/fcos/D4_top1_confirm/history.csv",
+      "value": 0.139779195189476
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50",
+      "kind": "metric",
+      "run_id": "55afb336b2e1414da584d89aed371d25",
+      "run_name": "D4_top1_confirm",
+      "source": "refinement/fcos/D4_top1_confirm/history.csv",
+      "value": 0.2700243294239044
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_mar100",
+      "kind": "metric",
+      "run_id": "55afb336b2e1414da584d89aed371d25",
+      "run_name": "D4_top1_confirm",
+      "source": "refinement/fcos/D4_top1_confirm/history.csv",
+      "value": 0.42642292380332947
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/epoch",
+      "kind": "metric",
+      "run_id": "55afb336b2e1414da584d89aed371d25",
+      "run_name": "D4_top1_confirm",
+      "source": "refinement/fcos/D4_top1_confirm/history.csv",
+      "value": 2.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/version",
+      "kind": "tag",
+      "run_id": "55afb336b2e1414da584d89aed371d25",
+      "run_name": "D4_top1_confirm",
+      "source": "normalization policy version 1",
+      "value": "1"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/status",
+      "kind": "tag",
+      "run_id": "55afb336b2e1414da584d89aed371d25",
+      "run_name": "D4_top1_confirm",
+      "source": "normalization policy version 1",
+      "value": "verified"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/source",
+      "kind": "tag",
+      "run_id": "55afb336b2e1414da584d89aed371d25",
+      "run_name": "D4_top1_confirm",
+      "source": "normalization policy version 1",
+      "value": "project_artifacts"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50_95",
+      "kind": "metric",
+      "run_id": "44968934fdf24283ad0c14d3d05dc290",
+      "run_name": "D5_resnet101_confirm_optional",
+      "source": "refinement/fcos/D5_resnet101_confirm_optional/history.csv",
+      "value": 0.2204543501138687
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50",
+      "kind": "metric",
+      "run_id": "44968934fdf24283ad0c14d3d05dc290",
+      "run_name": "D5_resnet101_confirm_optional",
+      "source": "refinement/fcos/D5_resnet101_confirm_optional/history.csv",
+      "value": 0.42584228515625
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_mar100",
+      "kind": "metric",
+      "run_id": "44968934fdf24283ad0c14d3d05dc290",
+      "run_name": "D5_resnet101_confirm_optional",
+      "source": "refinement/fcos/D5_resnet101_confirm_optional/history.csv",
+      "value": 0.45673179626464844
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/epoch",
+      "kind": "metric",
+      "run_id": "44968934fdf24283ad0c14d3d05dc290",
+      "run_name": "D5_resnet101_confirm_optional",
+      "source": "refinement/fcos/D5_resnet101_confirm_optional/history.csv",
+      "value": 13.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50_95",
+      "kind": "metric",
+      "run_id": "44968934fdf24283ad0c14d3d05dc290",
+      "run_name": "D5_resnet101_confirm_optional",
+      "source": "refinement/fcos/D5_resnet101_confirm_optional/history.csv",
+      "value": 0.20995089411735535
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50",
+      "kind": "metric",
+      "run_id": "44968934fdf24283ad0c14d3d05dc290",
+      "run_name": "D5_resnet101_confirm_optional",
+      "source": "refinement/fcos/D5_resnet101_confirm_optional/history.csv",
+      "value": 0.40343841910362244
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_mar100",
+      "kind": "metric",
+      "run_id": "44968934fdf24283ad0c14d3d05dc290",
+      "run_name": "D5_resnet101_confirm_optional",
+      "source": "refinement/fcos/D5_resnet101_confirm_optional/history.csv",
+      "value": 0.4267343282699585
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/epoch",
+      "kind": "metric",
+      "run_id": "44968934fdf24283ad0c14d3d05dc290",
+      "run_name": "D5_resnet101_confirm_optional",
+      "source": "refinement/fcos/D5_resnet101_confirm_optional/history.csv",
+      "value": 19.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/version",
+      "kind": "tag",
+      "run_id": "44968934fdf24283ad0c14d3d05dc290",
+      "run_name": "D5_resnet101_confirm_optional",
+      "source": "normalization policy version 1",
+      "value": "1"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/status",
+      "kind": "tag",
+      "run_id": "44968934fdf24283ad0c14d3d05dc290",
+      "run_name": "D5_resnet101_confirm_optional",
+      "source": "normalization policy version 1",
+      "value": "verified"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/source",
+      "kind": "tag",
+      "run_id": "44968934fdf24283ad0c14d3d05dc290",
+      "run_name": "D5_resnet101_confirm_optional",
+      "source": "normalization policy version 1",
+      "value": "project_artifacts"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50_95",
+      "kind": "metric",
+      "run_id": "1e82c58dcaf94c9982bd1e7ca92e78ef",
+      "run_name": "D5_top2_confirm",
+      "source": "refinement/fcos/D5_top2_confirm/history.csv",
+      "value": 0.11851996928453445
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50",
+      "kind": "metric",
+      "run_id": "1e82c58dcaf94c9982bd1e7ca92e78ef",
+      "run_name": "D5_top2_confirm",
+      "source": "refinement/fcos/D5_top2_confirm/history.csv",
+      "value": 0.25381749868392944
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_mar100",
+      "kind": "metric",
+      "run_id": "1e82c58dcaf94c9982bd1e7ca92e78ef",
+      "run_name": "D5_top2_confirm",
+      "source": "refinement/fcos/D5_top2_confirm/history.csv",
+      "value": 0.3167477548122406
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/epoch",
+      "kind": "metric",
+      "run_id": "1e82c58dcaf94c9982bd1e7ca92e78ef",
+      "run_name": "D5_top2_confirm",
+      "source": "refinement/fcos/D5_top2_confirm/history.csv",
+      "value": 3.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50_95",
+      "kind": "metric",
+      "run_id": "1e82c58dcaf94c9982bd1e7ca92e78ef",
+      "run_name": "D5_top2_confirm",
+      "source": "refinement/fcos/D5_top2_confirm/history.csv",
+      "value": 0.10441923886537552
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50",
+      "kind": "metric",
+      "run_id": "1e82c58dcaf94c9982bd1e7ca92e78ef",
+      "run_name": "D5_top2_confirm",
+      "source": "refinement/fcos/D5_top2_confirm/history.csv",
+      "value": 0.2409026026725769
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_mar100",
+      "kind": "metric",
+      "run_id": "1e82c58dcaf94c9982bd1e7ca92e78ef",
+      "run_name": "D5_top2_confirm",
+      "source": "refinement/fcos/D5_top2_confirm/history.csv",
+      "value": 0.2507575750350952
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/epoch",
+      "kind": "metric",
+      "run_id": "1e82c58dcaf94c9982bd1e7ca92e78ef",
+      "run_name": "D5_top2_confirm",
+      "source": "refinement/fcos/D5_top2_confirm/history.csv",
+      "value": 4.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/version",
+      "kind": "tag",
+      "run_id": "1e82c58dcaf94c9982bd1e7ca92e78ef",
+      "run_name": "D5_top2_confirm",
+      "source": "normalization policy version 1",
+      "value": "1"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/status",
+      "kind": "tag",
+      "run_id": "1e82c58dcaf94c9982bd1e7ca92e78ef",
+      "run_name": "D5_top2_confirm",
+      "source": "normalization policy version 1",
+      "value": "verified"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/source",
+      "kind": "tag",
+      "run_id": "1e82c58dcaf94c9982bd1e7ca92e78ef",
+      "run_name": "D5_top2_confirm",
+      "source": "normalization policy version 1",
+      "value": "project_artifacts"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50_95",
+      "kind": "metric",
+      "run_id": "80ebd29136e143858e2cb1d5d5382b4e",
+      "run_name": "E1_full_finetune",
+      "source": "refinement/fcos/E1_full_finetune/history.csv",
+      "value": 0.2747723460197449
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50",
+      "kind": "metric",
+      "run_id": "80ebd29136e143858e2cb1d5d5382b4e",
+      "run_name": "E1_full_finetune",
+      "source": "refinement/fcos/E1_full_finetune/history.csv",
+      "value": 0.45924726128578186
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_mar100",
+      "kind": "metric",
+      "run_id": "80ebd29136e143858e2cb1d5d5382b4e",
+      "run_name": "E1_full_finetune",
+      "source": "refinement/fcos/E1_full_finetune/history.csv",
+      "value": 0.5290660262107849
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/epoch",
+      "kind": "metric",
+      "run_id": "80ebd29136e143858e2cb1d5d5382b4e",
+      "run_name": "E1_full_finetune",
+      "source": "refinement/fcos/E1_full_finetune/history.csv",
+      "value": 18.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50_95",
+      "kind": "metric",
+      "run_id": "80ebd29136e143858e2cb1d5d5382b4e",
+      "run_name": "E1_full_finetune",
+      "source": "refinement/fcos/E1_full_finetune/history.csv",
+      "value": 0.26082339882850647
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50",
+      "kind": "metric",
+      "run_id": "80ebd29136e143858e2cb1d5d5382b4e",
+      "run_name": "E1_full_finetune",
+      "source": "refinement/fcos/E1_full_finetune/history.csv",
+      "value": 0.436810165643692
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_mar100",
+      "kind": "metric",
+      "run_id": "80ebd29136e143858e2cb1d5d5382b4e",
+      "run_name": "E1_full_finetune",
+      "source": "refinement/fcos/E1_full_finetune/history.csv",
+      "value": 0.4957790672779083
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/epoch",
+      "kind": "metric",
+      "run_id": "80ebd29136e143858e2cb1d5d5382b4e",
+      "run_name": "E1_full_finetune",
+      "source": "refinement/fcos/E1_full_finetune/history.csv",
+      "value": 20.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/version",
+      "kind": "tag",
+      "run_id": "80ebd29136e143858e2cb1d5d5382b4e",
+      "run_name": "E1_full_finetune",
+      "source": "normalization policy version 1",
+      "value": "1"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/status",
+      "kind": "tag",
+      "run_id": "80ebd29136e143858e2cb1d5d5382b4e",
+      "run_name": "E1_full_finetune",
+      "source": "normalization policy version 1",
+      "value": "verified"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/source",
+      "kind": "tag",
+      "run_id": "80ebd29136e143858e2cb1d5d5382b4e",
+      "run_name": "E1_full_finetune",
+      "source": "normalization policy version 1",
+      "value": "project_artifacts"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50_95",
+      "kind": "metric",
+      "run_id": "e690e2e968844dc98ff48561fd664888",
+      "run_name": "E2_freeze_backbone_3ep",
+      "source": "refinement/fcos/E2_freeze_backbone_3ep/history.csv",
+      "value": 0.2577296495437622
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50",
+      "kind": "metric",
+      "run_id": "e690e2e968844dc98ff48561fd664888",
+      "run_name": "E2_freeze_backbone_3ep",
+      "source": "refinement/fcos/E2_freeze_backbone_3ep/history.csv",
+      "value": 0.4608308970928192
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_mar100",
+      "kind": "metric",
+      "run_id": "e690e2e968844dc98ff48561fd664888",
+      "run_name": "E2_freeze_backbone_3ep",
+      "source": "refinement/fcos/E2_freeze_backbone_3ep/history.csv",
+      "value": 0.48030513525009155
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/epoch",
+      "kind": "metric",
+      "run_id": "e690e2e968844dc98ff48561fd664888",
+      "run_name": "E2_freeze_backbone_3ep",
+      "source": "refinement/fcos/E2_freeze_backbone_3ep/history.csv",
+      "value": 18.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50_95",
+      "kind": "metric",
+      "run_id": "e690e2e968844dc98ff48561fd664888",
+      "run_name": "E2_freeze_backbone_3ep",
+      "source": "refinement/fcos/E2_freeze_backbone_3ep/history.csv",
+      "value": 0.24574515223503113
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50",
+      "kind": "metric",
+      "run_id": "e690e2e968844dc98ff48561fd664888",
+      "run_name": "E2_freeze_backbone_3ep",
+      "source": "refinement/fcos/E2_freeze_backbone_3ep/history.csv",
+      "value": 0.4647212028503418
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_mar100",
+      "kind": "metric",
+      "run_id": "e690e2e968844dc98ff48561fd664888",
+      "run_name": "E2_freeze_backbone_3ep",
+      "source": "refinement/fcos/E2_freeze_backbone_3ep/history.csv",
+      "value": 0.4456108808517456
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/epoch",
+      "kind": "metric",
+      "run_id": "e690e2e968844dc98ff48561fd664888",
+      "run_name": "E2_freeze_backbone_3ep",
+      "source": "refinement/fcos/E2_freeze_backbone_3ep/history.csv",
+      "value": 20.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/version",
+      "kind": "tag",
+      "run_id": "e690e2e968844dc98ff48561fd664888",
+      "run_name": "E2_freeze_backbone_3ep",
+      "source": "normalization policy version 1",
+      "value": "1"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/status",
+      "kind": "tag",
+      "run_id": "e690e2e968844dc98ff48561fd664888",
+      "run_name": "E2_freeze_backbone_3ep",
+      "source": "normalization policy version 1",
+      "value": "verified"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/source",
+      "kind": "tag",
+      "run_id": "e690e2e968844dc98ff48561fd664888",
+      "run_name": "E2_freeze_backbone_3ep",
+      "source": "normalization policy version 1",
+      "value": "project_artifacts"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50_95",
+      "kind": "metric",
+      "run_id": "49c6a6be07414242aef060a85f52c182",
+      "run_name": "E3_freeze_backbone_5ep",
+      "source": "refinement/fcos/E3_freeze_backbone_5ep/history.csv",
+      "value": 0.27841654419898987
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50",
+      "kind": "metric",
+      "run_id": "49c6a6be07414242aef060a85f52c182",
+      "run_name": "E3_freeze_backbone_5ep",
+      "source": "refinement/fcos/E3_freeze_backbone_5ep/history.csv",
+      "value": 0.47805073857307434
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_mar100",
+      "kind": "metric",
+      "run_id": "49c6a6be07414242aef060a85f52c182",
+      "run_name": "E3_freeze_backbone_5ep",
+      "source": "refinement/fcos/E3_freeze_backbone_5ep/history.csv",
+      "value": 0.5166738629341125
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/epoch",
+      "kind": "metric",
+      "run_id": "49c6a6be07414242aef060a85f52c182",
+      "run_name": "E3_freeze_backbone_5ep",
+      "source": "refinement/fcos/E3_freeze_backbone_5ep/history.csv",
+      "value": 20.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50_95",
+      "kind": "metric",
+      "run_id": "49c6a6be07414242aef060a85f52c182",
+      "run_name": "E3_freeze_backbone_5ep",
+      "source": "refinement/fcos/E3_freeze_backbone_5ep/history.csv",
+      "value": 0.27841654419898987
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50",
+      "kind": "metric",
+      "run_id": "49c6a6be07414242aef060a85f52c182",
+      "run_name": "E3_freeze_backbone_5ep",
+      "source": "refinement/fcos/E3_freeze_backbone_5ep/history.csv",
+      "value": 0.47805073857307434
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_mar100",
+      "kind": "metric",
+      "run_id": "49c6a6be07414242aef060a85f52c182",
+      "run_name": "E3_freeze_backbone_5ep",
+      "source": "refinement/fcos/E3_freeze_backbone_5ep/history.csv",
+      "value": 0.5166738629341125
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/epoch",
+      "kind": "metric",
+      "run_id": "49c6a6be07414242aef060a85f52c182",
+      "run_name": "E3_freeze_backbone_5ep",
+      "source": "refinement/fcos/E3_freeze_backbone_5ep/history.csv",
+      "value": 20.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/version",
+      "kind": "tag",
+      "run_id": "49c6a6be07414242aef060a85f52c182",
+      "run_name": "E3_freeze_backbone_5ep",
+      "source": "normalization policy version 1",
+      "value": "1"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/status",
+      "kind": "tag",
+      "run_id": "49c6a6be07414242aef060a85f52c182",
+      "run_name": "E3_freeze_backbone_5ep",
+      "source": "normalization policy version 1",
+      "value": "verified"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/source",
+      "kind": "tag",
+      "run_id": "49c6a6be07414242aef060a85f52c182",
+      "run_name": "E3_freeze_backbone_5ep",
+      "source": "normalization policy version 1",
+      "value": "project_artifacts"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50_95",
+      "kind": "metric",
+      "run_id": "5b2630950f384adeb9c68bacc44764bb",
+      "run_name": "F_final_fcos_tuned",
+      "source": "refinement/fcos/F_final_fcos_tuned/history.csv",
+      "value": 0.28129565715789795
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50",
+      "kind": "metric",
+      "run_id": "5b2630950f384adeb9c68bacc44764bb",
+      "run_name": "F_final_fcos_tuned",
+      "source": "refinement/fcos/F_final_fcos_tuned/history.csv",
+      "value": 0.49570468068122864
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_mar100",
+      "kind": "metric",
+      "run_id": "5b2630950f384adeb9c68bacc44764bb",
+      "run_name": "F_final_fcos_tuned",
+      "source": "refinement/fcos/F_final_fcos_tuned/history.csv",
+      "value": 0.5055831670761108
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/epoch",
+      "kind": "metric",
+      "run_id": "5b2630950f384adeb9c68bacc44764bb",
+      "run_name": "F_final_fcos_tuned",
+      "source": "refinement/fcos/F_final_fcos_tuned/history.csv",
+      "value": 17.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50_95",
+      "kind": "metric",
+      "run_id": "5b2630950f384adeb9c68bacc44764bb",
+      "run_name": "F_final_fcos_tuned",
+      "source": "refinement/fcos/F_final_fcos_tuned/history.csv",
+      "value": 0.272228866815567
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50",
+      "kind": "metric",
+      "run_id": "5b2630950f384adeb9c68bacc44764bb",
+      "run_name": "F_final_fcos_tuned",
+      "source": "refinement/fcos/F_final_fcos_tuned/history.csv",
+      "value": 0.47089332342147827
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_mar100",
+      "kind": "metric",
+      "run_id": "5b2630950f384adeb9c68bacc44764bb",
+      "run_name": "F_final_fcos_tuned",
+      "source": "refinement/fcos/F_final_fcos_tuned/history.csv",
+      "value": 0.49757906794548035
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/epoch",
+      "kind": "metric",
+      "run_id": "5b2630950f384adeb9c68bacc44764bb",
+      "run_name": "F_final_fcos_tuned",
+      "source": "refinement/fcos/F_final_fcos_tuned/history.csv",
+      "value": 20.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/version",
+      "kind": "tag",
+      "run_id": "5b2630950f384adeb9c68bacc44764bb",
+      "run_name": "F_final_fcos_tuned",
+      "source": "normalization policy version 1",
+      "value": "1"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/status",
+      "kind": "tag",
+      "run_id": "5b2630950f384adeb9c68bacc44764bb",
+      "run_name": "F_final_fcos_tuned",
+      "source": "normalization policy version 1",
+      "value": "verified"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/source",
+      "kind": "tag",
+      "run_id": "5b2630950f384adeb9c68bacc44764bb",
+      "run_name": "F_final_fcos_tuned",
+      "source": "normalization policy version 1",
+      "value": "project_artifacts"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50_95",
+      "kind": "metric",
+      "run_id": "09f33e36ba5f48a7bf75d76312888679",
+      "run_name": "G1_no_clip",
+      "source": "refinement/fcos/G1_no_clip/history.csv",
+      "value": 0.23648390173912048
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50",
+      "kind": "metric",
+      "run_id": "09f33e36ba5f48a7bf75d76312888679",
+      "run_name": "G1_no_clip",
+      "source": "refinement/fcos/G1_no_clip/history.csv",
+      "value": 0.3998121917247772
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_mar100",
+      "kind": "metric",
+      "run_id": "09f33e36ba5f48a7bf75d76312888679",
+      "run_name": "G1_no_clip",
+      "source": "refinement/fcos/G1_no_clip/history.csv",
+      "value": 0.6373584270477295
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/epoch",
+      "kind": "metric",
+      "run_id": "09f33e36ba5f48a7bf75d76312888679",
+      "run_name": "G1_no_clip",
+      "source": "refinement/fcos/G1_no_clip/history.csv",
+      "value": 4.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50_95",
+      "kind": "metric",
+      "run_id": "09f33e36ba5f48a7bf75d76312888679",
+      "run_name": "G1_no_clip",
+      "source": "refinement/fcos/G1_no_clip/history.csv",
+      "value": 0.2083127349615097
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50",
+      "kind": "metric",
+      "run_id": "09f33e36ba5f48a7bf75d76312888679",
+      "run_name": "G1_no_clip",
+      "source": "refinement/fcos/G1_no_clip/history.csv",
+      "value": 0.3238241672515869
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_mar100",
+      "kind": "metric",
+      "run_id": "09f33e36ba5f48a7bf75d76312888679",
+      "run_name": "G1_no_clip",
+      "source": "refinement/fcos/G1_no_clip/history.csv",
+      "value": 0.5222862362861633
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/epoch",
+      "kind": "metric",
+      "run_id": "09f33e36ba5f48a7bf75d76312888679",
+      "run_name": "G1_no_clip",
+      "source": "refinement/fcos/G1_no_clip/history.csv",
+      "value": 20.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/version",
+      "kind": "tag",
+      "run_id": "09f33e36ba5f48a7bf75d76312888679",
+      "run_name": "G1_no_clip",
+      "source": "normalization policy version 1",
+      "value": "1"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/status",
+      "kind": "tag",
+      "run_id": "09f33e36ba5f48a7bf75d76312888679",
+      "run_name": "G1_no_clip",
+      "source": "normalization policy version 1",
+      "value": "verified"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/source",
+      "kind": "tag",
+      "run_id": "09f33e36ba5f48a7bf75d76312888679",
+      "run_name": "G1_no_clip",
+      "source": "normalization policy version 1",
+      "value": "project_artifacts"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50_95",
+      "kind": "metric",
+      "run_id": "1b5f40896b0b4056b745800c4be0217d",
+      "run_name": "G2_clip5",
+      "source": "refinement/fcos/G2_clip5/history.csv",
+      "value": 0.2833552956581116
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50",
+      "kind": "metric",
+      "run_id": "1b5f40896b0b4056b745800c4be0217d",
+      "run_name": "G2_clip5",
+      "source": "refinement/fcos/G2_clip5/history.csv",
+      "value": 0.46648016571998596
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_mar100",
+      "kind": "metric",
+      "run_id": "1b5f40896b0b4056b745800c4be0217d",
+      "run_name": "G2_clip5",
+      "source": "refinement/fcos/G2_clip5/history.csv",
+      "value": 0.5968669652938843
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/epoch",
+      "kind": "metric",
+      "run_id": "1b5f40896b0b4056b745800c4be0217d",
+      "run_name": "G2_clip5",
+      "source": "refinement/fcos/G2_clip5/history.csv",
+      "value": 7.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50_95",
+      "kind": "metric",
+      "run_id": "1b5f40896b0b4056b745800c4be0217d",
+      "run_name": "G2_clip5",
+      "source": "refinement/fcos/G2_clip5/history.csv",
+      "value": 0.2430252879858017
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50",
+      "kind": "metric",
+      "run_id": "1b5f40896b0b4056b745800c4be0217d",
+      "run_name": "G2_clip5",
+      "source": "refinement/fcos/G2_clip5/history.csv",
+      "value": 0.3906068503856659
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_mar100",
+      "kind": "metric",
+      "run_id": "1b5f40896b0b4056b745800c4be0217d",
+      "run_name": "G2_clip5",
+      "source": "refinement/fcos/G2_clip5/history.csv",
+      "value": 0.36457836627960205
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/epoch",
+      "kind": "metric",
+      "run_id": "1b5f40896b0b4056b745800c4be0217d",
+      "run_name": "G2_clip5",
+      "source": "refinement/fcos/G2_clip5/history.csv",
+      "value": 20.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/version",
+      "kind": "tag",
+      "run_id": "1b5f40896b0b4056b745800c4be0217d",
+      "run_name": "G2_clip5",
+      "source": "normalization policy version 1",
+      "value": "1"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/status",
+      "kind": "tag",
+      "run_id": "1b5f40896b0b4056b745800c4be0217d",
+      "run_name": "G2_clip5",
+      "source": "normalization policy version 1",
+      "value": "verified"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/source",
+      "kind": "tag",
+      "run_id": "1b5f40896b0b4056b745800c4be0217d",
+      "run_name": "G2_clip5",
+      "source": "normalization policy version 1",
+      "value": "project_artifacts"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50_95",
+      "kind": "metric",
+      "run_id": "d288b254cb2d4725a25f2c98e2156a75",
+      "run_name": "G3_clip10",
+      "source": "refinement/fcos/G3_clip10/history.csv",
+      "value": 0.28204065561294556
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50",
+      "kind": "metric",
+      "run_id": "d288b254cb2d4725a25f2c98e2156a75",
+      "run_name": "G3_clip10",
+      "source": "refinement/fcos/G3_clip10/history.csv",
+      "value": 0.4756581485271454
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_mar100",
+      "kind": "metric",
+      "run_id": "d288b254cb2d4725a25f2c98e2156a75",
+      "run_name": "G3_clip10",
+      "source": "refinement/fcos/G3_clip10/history.csv",
+      "value": 0.5887297987937927
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/epoch",
+      "kind": "metric",
+      "run_id": "d288b254cb2d4725a25f2c98e2156a75",
+      "run_name": "G3_clip10",
+      "source": "refinement/fcos/G3_clip10/history.csv",
+      "value": 9.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50_95",
+      "kind": "metric",
+      "run_id": "d288b254cb2d4725a25f2c98e2156a75",
+      "run_name": "G3_clip10",
+      "source": "refinement/fcos/G3_clip10/history.csv",
+      "value": 0.23692530393600464
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50",
+      "kind": "metric",
+      "run_id": "d288b254cb2d4725a25f2c98e2156a75",
+      "run_name": "G3_clip10",
+      "source": "refinement/fcos/G3_clip10/history.csv",
+      "value": 0.38228753209114075
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_mar100",
+      "kind": "metric",
+      "run_id": "d288b254cb2d4725a25f2c98e2156a75",
+      "run_name": "G3_clip10",
+      "source": "refinement/fcos/G3_clip10/history.csv",
+      "value": 0.3697698712348938
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/epoch",
+      "kind": "metric",
+      "run_id": "d288b254cb2d4725a25f2c98e2156a75",
+      "run_name": "G3_clip10",
+      "source": "refinement/fcos/G3_clip10/history.csv",
+      "value": 20.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/version",
+      "kind": "tag",
+      "run_id": "d288b254cb2d4725a25f2c98e2156a75",
+      "run_name": "G3_clip10",
+      "source": "normalization policy version 1",
+      "value": "1"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/status",
+      "kind": "tag",
+      "run_id": "d288b254cb2d4725a25f2c98e2156a75",
+      "run_name": "G3_clip10",
+      "source": "normalization policy version 1",
+      "value": "verified"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/source",
+      "kind": "tag",
+      "run_id": "d288b254cb2d4725a25f2c98e2156a75",
+      "run_name": "G3_clip10",
+      "source": "normalization policy version 1",
+      "value": "project_artifacts"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50_95",
+      "kind": "metric",
+      "run_id": "c89f17fbbee54e49972b1cb53360128d",
+      "run_name": "R1_wd0",
+      "source": "refinement/fcos/R1_wd0/history.csv",
+      "value": 0.2821246385574341
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50",
+      "kind": "metric",
+      "run_id": "c89f17fbbee54e49972b1cb53360128d",
+      "run_name": "R1_wd0",
+      "source": "refinement/fcos/R1_wd0/history.csv",
+      "value": 0.4525494873523712
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_mar100",
+      "kind": "metric",
+      "run_id": "c89f17fbbee54e49972b1cb53360128d",
+      "run_name": "R1_wd0",
+      "source": "refinement/fcos/R1_wd0/history.csv",
+      "value": 0.6404808759689331
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/epoch",
+      "kind": "metric",
+      "run_id": "c89f17fbbee54e49972b1cb53360128d",
+      "run_name": "R1_wd0",
+      "source": "refinement/fcos/R1_wd0/history.csv",
+      "value": 6.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50_95",
+      "kind": "metric",
+      "run_id": "c89f17fbbee54e49972b1cb53360128d",
+      "run_name": "R1_wd0",
+      "source": "refinement/fcos/R1_wd0/history.csv",
+      "value": 0.2476235181093216
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50",
+      "kind": "metric",
+      "run_id": "c89f17fbbee54e49972b1cb53360128d",
+      "run_name": "R1_wd0",
+      "source": "refinement/fcos/R1_wd0/history.csv",
+      "value": 0.3958958387374878
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_mar100",
+      "kind": "metric",
+      "run_id": "c89f17fbbee54e49972b1cb53360128d",
+      "run_name": "R1_wd0",
+      "source": "refinement/fcos/R1_wd0/history.csv",
+      "value": 0.3966001868247986
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/epoch",
+      "kind": "metric",
+      "run_id": "c89f17fbbee54e49972b1cb53360128d",
+      "run_name": "R1_wd0",
+      "source": "refinement/fcos/R1_wd0/history.csv",
+      "value": 20.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/version",
+      "kind": "tag",
+      "run_id": "c89f17fbbee54e49972b1cb53360128d",
+      "run_name": "R1_wd0",
+      "source": "normalization policy version 1",
+      "value": "1"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/status",
+      "kind": "tag",
+      "run_id": "c89f17fbbee54e49972b1cb53360128d",
+      "run_name": "R1_wd0",
+      "source": "normalization policy version 1",
+      "value": "verified"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/source",
+      "kind": "tag",
+      "run_id": "c89f17fbbee54e49972b1cb53360128d",
+      "run_name": "R1_wd0",
+      "source": "normalization policy version 1",
+      "value": "project_artifacts"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50_95",
+      "kind": "metric",
+      "run_id": "17dd43be0da74823b2cdee8b25133492",
+      "run_name": "R2_wd1e5",
+      "source": "refinement/fcos/R2_wd1e5/history.csv",
+      "value": 0.2660418152809143
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50",
+      "kind": "metric",
+      "run_id": "17dd43be0da74823b2cdee8b25133492",
+      "run_name": "R2_wd1e5",
+      "source": "refinement/fcos/R2_wd1e5/history.csv",
+      "value": 0.4509846270084381
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_mar100",
+      "kind": "metric",
+      "run_id": "17dd43be0da74823b2cdee8b25133492",
+      "run_name": "R2_wd1e5",
+      "source": "refinement/fcos/R2_wd1e5/history.csv",
+      "value": 0.6268827319145203
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/epoch",
+      "kind": "metric",
+      "run_id": "17dd43be0da74823b2cdee8b25133492",
+      "run_name": "R2_wd1e5",
+      "source": "refinement/fcos/R2_wd1e5/history.csv",
+      "value": 9.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50_95",
+      "kind": "metric",
+      "run_id": "17dd43be0da74823b2cdee8b25133492",
+      "run_name": "R2_wd1e5",
+      "source": "refinement/fcos/R2_wd1e5/history.csv",
+      "value": 0.2433016002178192
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50",
+      "kind": "metric",
+      "run_id": "17dd43be0da74823b2cdee8b25133492",
+      "run_name": "R2_wd1e5",
+      "source": "refinement/fcos/R2_wd1e5/history.csv",
+      "value": 0.39769935607910156
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_mar100",
+      "kind": "metric",
+      "run_id": "17dd43be0da74823b2cdee8b25133492",
+      "run_name": "R2_wd1e5",
+      "source": "refinement/fcos/R2_wd1e5/history.csv",
+      "value": 0.3963829278945923
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/epoch",
+      "kind": "metric",
+      "run_id": "17dd43be0da74823b2cdee8b25133492",
+      "run_name": "R2_wd1e5",
+      "source": "refinement/fcos/R2_wd1e5/history.csv",
+      "value": 20.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/version",
+      "kind": "tag",
+      "run_id": "17dd43be0da74823b2cdee8b25133492",
+      "run_name": "R2_wd1e5",
+      "source": "normalization policy version 1",
+      "value": "1"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/status",
+      "kind": "tag",
+      "run_id": "17dd43be0da74823b2cdee8b25133492",
+      "run_name": "R2_wd1e5",
+      "source": "normalization policy version 1",
+      "value": "verified"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/source",
+      "kind": "tag",
+      "run_id": "17dd43be0da74823b2cdee8b25133492",
+      "run_name": "R2_wd1e5",
+      "source": "normalization policy version 1",
+      "value": "project_artifacts"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50_95",
+      "kind": "metric",
+      "run_id": "bf25e3d326de4e3d9c80252780720b7d",
+      "run_name": "R3_wd1e4",
+      "source": "refinement/fcos/R3_wd1e4/history.csv",
+      "value": 0.2691836953163147
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50",
+      "kind": "metric",
+      "run_id": "bf25e3d326de4e3d9c80252780720b7d",
+      "run_name": "R3_wd1e4",
+      "source": "refinement/fcos/R3_wd1e4/history.csv",
+      "value": 0.4539751708507538
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_mar100",
+      "kind": "metric",
+      "run_id": "bf25e3d326de4e3d9c80252780720b7d",
+      "run_name": "R3_wd1e4",
+      "source": "refinement/fcos/R3_wd1e4/history.csv",
+      "value": 0.5482551455497742
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/epoch",
+      "kind": "metric",
+      "run_id": "bf25e3d326de4e3d9c80252780720b7d",
+      "run_name": "R3_wd1e4",
+      "source": "refinement/fcos/R3_wd1e4/history.csv",
+      "value": 8.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50_95",
+      "kind": "metric",
+      "run_id": "bf25e3d326de4e3d9c80252780720b7d",
+      "run_name": "R3_wd1e4",
+      "source": "refinement/fcos/R3_wd1e4/history.csv",
+      "value": 0.2462490350008011
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50",
+      "kind": "metric",
+      "run_id": "bf25e3d326de4e3d9c80252780720b7d",
+      "run_name": "R3_wd1e4",
+      "source": "refinement/fcos/R3_wd1e4/history.csv",
+      "value": 0.3960053324699402
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_mar100",
+      "kind": "metric",
+      "run_id": "bf25e3d326de4e3d9c80252780720b7d",
+      "run_name": "R3_wd1e4",
+      "source": "refinement/fcos/R3_wd1e4/history.csv",
+      "value": 0.3903132677078247
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/epoch",
+      "kind": "metric",
+      "run_id": "bf25e3d326de4e3d9c80252780720b7d",
+      "run_name": "R3_wd1e4",
+      "source": "refinement/fcos/R3_wd1e4/history.csv",
+      "value": 20.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/version",
+      "kind": "tag",
+      "run_id": "bf25e3d326de4e3d9c80252780720b7d",
+      "run_name": "R3_wd1e4",
+      "source": "normalization policy version 1",
+      "value": "1"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/status",
+      "kind": "tag",
+      "run_id": "bf25e3d326de4e3d9c80252780720b7d",
+      "run_name": "R3_wd1e4",
+      "source": "normalization policy version 1",
+      "value": "verified"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/source",
+      "kind": "tag",
+      "run_id": "bf25e3d326de4e3d9c80252780720b7d",
+      "run_name": "R3_wd1e4",
+      "source": "normalization policy version 1",
+      "value": "project_artifacts"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50_95",
+      "kind": "metric",
+      "run_id": "6c29b2c8a94b42f7b29521ffdb41f1c1",
+      "run_name": "R4_wd5e4",
+      "source": "refinement/fcos/R4_wd5e4/history.csv",
+      "value": 0.27358773350715637
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50",
+      "kind": "metric",
+      "run_id": "6c29b2c8a94b42f7b29521ffdb41f1c1",
+      "run_name": "R4_wd5e4",
+      "source": "refinement/fcos/R4_wd5e4/history.csv",
+      "value": 0.45658934116363525
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_mar100",
+      "kind": "metric",
+      "run_id": "6c29b2c8a94b42f7b29521ffdb41f1c1",
+      "run_name": "R4_wd5e4",
+      "source": "refinement/fcos/R4_wd5e4/history.csv",
+      "value": 0.6467276215553284
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/epoch",
+      "kind": "metric",
+      "run_id": "6c29b2c8a94b42f7b29521ffdb41f1c1",
+      "run_name": "R4_wd5e4",
+      "source": "refinement/fcos/R4_wd5e4/history.csv",
+      "value": 7.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50_95",
+      "kind": "metric",
+      "run_id": "6c29b2c8a94b42f7b29521ffdb41f1c1",
+      "run_name": "R4_wd5e4",
+      "source": "refinement/fcos/R4_wd5e4/history.csv",
+      "value": 0.24363665282726288
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50",
+      "kind": "metric",
+      "run_id": "6c29b2c8a94b42f7b29521ffdb41f1c1",
+      "run_name": "R4_wd5e4",
+      "source": "refinement/fcos/R4_wd5e4/history.csv",
+      "value": 0.3864861726760864
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_mar100",
+      "kind": "metric",
+      "run_id": "6c29b2c8a94b42f7b29521ffdb41f1c1",
+      "run_name": "R4_wd5e4",
+      "source": "refinement/fcos/R4_wd5e4/history.csv",
+      "value": 0.3773977756500244
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/epoch",
+      "kind": "metric",
+      "run_id": "6c29b2c8a94b42f7b29521ffdb41f1c1",
+      "run_name": "R4_wd5e4",
+      "source": "refinement/fcos/R4_wd5e4/history.csv",
+      "value": 20.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/version",
+      "kind": "tag",
+      "run_id": "6c29b2c8a94b42f7b29521ffdb41f1c1",
+      "run_name": "R4_wd5e4",
+      "source": "normalization policy version 1",
+      "value": "1"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/status",
+      "kind": "tag",
+      "run_id": "6c29b2c8a94b42f7b29521ffdb41f1c1",
+      "run_name": "R4_wd5e4",
+      "source": "normalization policy version 1",
+      "value": "verified"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/source",
+      "kind": "tag",
+      "run_id": "6c29b2c8a94b42f7b29521ffdb41f1c1",
+      "run_name": "R4_wd5e4",
+      "source": "normalization policy version 1",
+      "value": "project_artifacts"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50_95",
+      "kind": "metric",
+      "run_id": "9abe425333054aef82b29d086a0d75aa",
+      "run_name": "R5_wd1e3",
+      "source": "refinement/fcos/R5_wd1e3/history.csv",
+      "value": 0.27619731426239014
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50",
+      "kind": "metric",
+      "run_id": "9abe425333054aef82b29d086a0d75aa",
+      "run_name": "R5_wd1e3",
+      "source": "refinement/fcos/R5_wd1e3/history.csv",
+      "value": 0.4532831609249115
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_mar100",
+      "kind": "metric",
+      "run_id": "9abe425333054aef82b29d086a0d75aa",
+      "run_name": "R5_wd1e3",
+      "source": "refinement/fcos/R5_wd1e3/history.csv",
+      "value": 0.6176310181617737
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/epoch",
+      "kind": "metric",
+      "run_id": "9abe425333054aef82b29d086a0d75aa",
+      "run_name": "R5_wd1e3",
+      "source": "refinement/fcos/R5_wd1e3/history.csv",
+      "value": 7.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50_95",
+      "kind": "metric",
+      "run_id": "9abe425333054aef82b29d086a0d75aa",
+      "run_name": "R5_wd1e3",
+      "source": "refinement/fcos/R5_wd1e3/history.csv",
+      "value": 0.2375400960445404
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50",
+      "kind": "metric",
+      "run_id": "9abe425333054aef82b29d086a0d75aa",
+      "run_name": "R5_wd1e3",
+      "source": "refinement/fcos/R5_wd1e3/history.csv",
+      "value": 0.3759523928165436
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_mar100",
+      "kind": "metric",
+      "run_id": "9abe425333054aef82b29d086a0d75aa",
+      "run_name": "R5_wd1e3",
+      "source": "refinement/fcos/R5_wd1e3/history.csv",
+      "value": 0.37909916043281555
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/epoch",
+      "kind": "metric",
+      "run_id": "9abe425333054aef82b29d086a0d75aa",
+      "run_name": "R5_wd1e3",
+      "source": "refinement/fcos/R5_wd1e3/history.csv",
+      "value": 20.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/version",
+      "kind": "tag",
+      "run_id": "9abe425333054aef82b29d086a0d75aa",
+      "run_name": "R5_wd1e3",
+      "source": "normalization policy version 1",
+      "value": "1"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/status",
+      "kind": "tag",
+      "run_id": "9abe425333054aef82b29d086a0d75aa",
+      "run_name": "R5_wd1e3",
+      "source": "normalization policy version 1",
+      "value": "verified"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/source",
+      "kind": "tag",
+      "run_id": "9abe425333054aef82b29d086a0d75aa",
+      "run_name": "R5_wd1e3",
+      "source": "normalization policy version 1",
+      "value": "project_artifacts"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50_95",
+      "kind": "metric",
+      "run_id": "48bc83b1959545e4a00bd1f72ab6aec4",
+      "run_name": "V1_512",
+      "source": "refinement/fcos/V1_512/history.csv",
+      "value": 0.2408849000930786
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50",
+      "kind": "metric",
+      "run_id": "48bc83b1959545e4a00bd1f72ab6aec4",
+      "run_name": "V1_512",
+      "source": "refinement/fcos/V1_512/history.csv",
+      "value": 0.45518937706947327
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_mar100",
+      "kind": "metric",
+      "run_id": "48bc83b1959545e4a00bd1f72ab6aec4",
+      "run_name": "V1_512",
+      "source": "refinement/fcos/V1_512/history.csv",
+      "value": 0.5735014081001282
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/epoch",
+      "kind": "metric",
+      "run_id": "48bc83b1959545e4a00bd1f72ab6aec4",
+      "run_name": "V1_512",
+      "source": "refinement/fcos/V1_512/history.csv",
+      "value": 14.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50_95",
+      "kind": "metric",
+      "run_id": "48bc83b1959545e4a00bd1f72ab6aec4",
+      "run_name": "V1_512",
+      "source": "refinement/fcos/V1_512/history.csv",
+      "value": 0.2314150035381317
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50",
+      "kind": "metric",
+      "run_id": "48bc83b1959545e4a00bd1f72ab6aec4",
+      "run_name": "V1_512",
+      "source": "refinement/fcos/V1_512/history.csv",
+      "value": 0.4285593628883362
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_mar100",
+      "kind": "metric",
+      "run_id": "48bc83b1959545e4a00bd1f72ab6aec4",
+      "run_name": "V1_512",
+      "source": "refinement/fcos/V1_512/history.csv",
+      "value": 0.5232723951339722
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/epoch",
+      "kind": "metric",
+      "run_id": "48bc83b1959545e4a00bd1f72ab6aec4",
+      "run_name": "V1_512",
+      "source": "refinement/fcos/V1_512/history.csv",
+      "value": 20.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/version",
+      "kind": "tag",
+      "run_id": "48bc83b1959545e4a00bd1f72ab6aec4",
+      "run_name": "V1_512",
+      "source": "normalization policy version 1",
+      "value": "1"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/status",
+      "kind": "tag",
+      "run_id": "48bc83b1959545e4a00bd1f72ab6aec4",
+      "run_name": "V1_512",
+      "source": "normalization policy version 1",
+      "value": "verified"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/source",
+      "kind": "tag",
+      "run_id": "48bc83b1959545e4a00bd1f72ab6aec4",
+      "run_name": "V1_512",
+      "source": "normalization policy version 1",
+      "value": "project_artifacts"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50_95",
+      "kind": "metric",
+      "run_id": "452737eb4c4a49f3849d151cdff47613",
+      "run_name": "V2_640",
+      "source": "refinement/fcos/V2_640/history.csv",
+      "value": 0.2516266703605652
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50",
+      "kind": "metric",
+      "run_id": "452737eb4c4a49f3849d151cdff47613",
+      "run_name": "V2_640",
+      "source": "refinement/fcos/V2_640/history.csv",
+      "value": 0.476880818605423
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_mar100",
+      "kind": "metric",
+      "run_id": "452737eb4c4a49f3849d151cdff47613",
+      "run_name": "V2_640",
+      "source": "refinement/fcos/V2_640/history.csv",
+      "value": 0.5205230116844177
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/epoch",
+      "kind": "metric",
+      "run_id": "452737eb4c4a49f3849d151cdff47613",
+      "run_name": "V2_640",
+      "source": "refinement/fcos/V2_640/history.csv",
+      "value": 17.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50_95",
+      "kind": "metric",
+      "run_id": "452737eb4c4a49f3849d151cdff47613",
+      "run_name": "V2_640",
+      "source": "refinement/fcos/V2_640/history.csv",
+      "value": 0.23957203328609467
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50",
+      "kind": "metric",
+      "run_id": "452737eb4c4a49f3849d151cdff47613",
+      "run_name": "V2_640",
+      "source": "refinement/fcos/V2_640/history.csv",
+      "value": 0.46533289551734924
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_mar100",
+      "kind": "metric",
+      "run_id": "452737eb4c4a49f3849d151cdff47613",
+      "run_name": "V2_640",
+      "source": "refinement/fcos/V2_640/history.csv",
+      "value": 0.48485466837882996
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/epoch",
+      "kind": "metric",
+      "run_id": "452737eb4c4a49f3849d151cdff47613",
+      "run_name": "V2_640",
+      "source": "refinement/fcos/V2_640/history.csv",
+      "value": 20.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/version",
+      "kind": "tag",
+      "run_id": "452737eb4c4a49f3849d151cdff47613",
+      "run_name": "V2_640",
+      "source": "normalization policy version 1",
+      "value": "1"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/status",
+      "kind": "tag",
+      "run_id": "452737eb4c4a49f3849d151cdff47613",
+      "run_name": "V2_640",
+      "source": "normalization policy version 1",
+      "value": "verified"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/source",
+      "kind": "tag",
+      "run_id": "452737eb4c4a49f3849d151cdff47613",
+      "run_name": "V2_640",
+      "source": "normalization policy version 1",
+      "value": "project_artifacts"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50_95",
+      "kind": "metric",
+      "run_id": "594e69e2999840148f86ab87c8e5741d",
+      "run_name": "V3_768",
+      "source": "refinement/fcos/V3_768/history.csv",
+      "value": 0.28292641043663025
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50",
+      "kind": "metric",
+      "run_id": "594e69e2999840148f86ab87c8e5741d",
+      "run_name": "V3_768",
+      "source": "refinement/fcos/V3_768/history.csv",
+      "value": 0.4811135530471802
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_mar100",
+      "kind": "metric",
+      "run_id": "594e69e2999840148f86ab87c8e5741d",
+      "run_name": "V3_768",
+      "source": "refinement/fcos/V3_768/history.csv",
+      "value": 0.5654151439666748
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/epoch",
+      "kind": "metric",
+      "run_id": "594e69e2999840148f86ab87c8e5741d",
+      "run_name": "V3_768",
+      "source": "refinement/fcos/V3_768/history.csv",
+      "value": 15.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50_95",
+      "kind": "metric",
+      "run_id": "594e69e2999840148f86ab87c8e5741d",
+      "run_name": "V3_768",
+      "source": "refinement/fcos/V3_768/history.csv",
+      "value": 0.2708732783794403
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50",
+      "kind": "metric",
+      "run_id": "594e69e2999840148f86ab87c8e5741d",
+      "run_name": "V3_768",
+      "source": "refinement/fcos/V3_768/history.csv",
+      "value": 0.4712512195110321
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_mar100",
+      "kind": "metric",
+      "run_id": "594e69e2999840148f86ab87c8e5741d",
+      "run_name": "V3_768",
+      "source": "refinement/fcos/V3_768/history.csv",
+      "value": 0.5068208575248718
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/epoch",
+      "kind": "metric",
+      "run_id": "594e69e2999840148f86ab87c8e5741d",
+      "run_name": "V3_768",
+      "source": "refinement/fcos/V3_768/history.csv",
+      "value": 20.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/version",
+      "kind": "tag",
+      "run_id": "594e69e2999840148f86ab87c8e5741d",
+      "run_name": "V3_768",
+      "source": "normalization policy version 1",
+      "value": "1"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/status",
+      "kind": "tag",
+      "run_id": "594e69e2999840148f86ab87c8e5741d",
+      "run_name": "V3_768",
+      "source": "normalization policy version 1",
+      "value": "verified"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/source",
+      "kind": "tag",
+      "run_id": "594e69e2999840148f86ab87c8e5741d",
+      "run_name": "V3_768",
+      "source": "normalization policy version 1",
+      "value": "project_artifacts"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50_95",
+      "kind": "metric",
+      "run_id": "d8b84598fee04ffa902dbe3a1d42c016",
+      "run_name": "V4_896",
+      "source": "refinement/fcos/V4_896/history.csv",
+      "value": 0.27751263976097107
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_map50",
+      "kind": "metric",
+      "run_id": "d8b84598fee04ffa902dbe3a1d42c016",
+      "run_name": "V4_896",
+      "source": "refinement/fcos/V4_896/history.csv",
+      "value": 0.4652911126613617
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/val_mar100",
+      "kind": "metric",
+      "run_id": "d8b84598fee04ffa902dbe3a1d42c016",
+      "run_name": "V4_896",
+      "source": "refinement/fcos/V4_896/history.csv",
+      "value": 0.5040813088417053
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "best/epoch",
+      "kind": "metric",
+      "run_id": "d8b84598fee04ffa902dbe3a1d42c016",
+      "run_name": "V4_896",
+      "source": "refinement/fcos/V4_896/history.csv",
+      "value": 19.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50_95",
+      "kind": "metric",
+      "run_id": "d8b84598fee04ffa902dbe3a1d42c016",
+      "run_name": "V4_896",
+      "source": "refinement/fcos/V4_896/history.csv",
+      "value": 0.2739723324775696
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_map50",
+      "kind": "metric",
+      "run_id": "d8b84598fee04ffa902dbe3a1d42c016",
+      "run_name": "V4_896",
+      "source": "refinement/fcos/V4_896/history.csv",
+      "value": 0.4626787304878235
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/val_mar100",
+      "kind": "metric",
+      "run_id": "d8b84598fee04ffa902dbe3a1d42c016",
+      "run_name": "V4_896",
+      "source": "refinement/fcos/V4_896/history.csv",
+      "value": 0.5051555633544922
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "last/epoch",
+      "kind": "metric",
+      "run_id": "d8b84598fee04ffa902dbe3a1d42c016",
+      "run_name": "V4_896",
+      "source": "refinement/fcos/V4_896/history.csv",
+      "value": 20.0
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/version",
+      "kind": "tag",
+      "run_id": "d8b84598fee04ffa902dbe3a1d42c016",
+      "run_name": "V4_896",
+      "source": "normalization policy version 1",
+      "value": "1"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/status",
+      "kind": "tag",
+      "run_id": "d8b84598fee04ffa902dbe3a1d42c016",
+      "run_name": "V4_896",
+      "source": "normalization policy version 1",
+      "value": "verified"
+    },
+    {
+      "action": "UNCHANGED",
+      "confidence": "VERIFIED",
+      "key": "normalization/source",
+      "kind": "tag",
+      "run_id": "d8b84598fee04ffa902dbe3a1d42c016",
+      "run_name": "V4_896",
+      "source": "normalization policy version 1",
+      "value": "project_artifacts"
+    }
+  ],
+  "final_model": {
+    "best_checkpoint_sha256": "ec4ee94b2bf7afcb77873fe4d26915bec2c7af71f09cd68353beb65561ca783d",
+    "best_human_epoch": 17,
+    "best_zero_based_index": 16,
+    "history_length": 20,
+    "history_path": "artifacts/refinement/fcos/F_final_fcos_tuned/history.csv",
+    "normalized_values": {
+      "best/epoch": 17.0,
+      "best/val_map50": 0.49570468068122864,
+      "best/val_map50_95": 0.28129565715789795,
+      "best/val_mar100": 0.5055831670761108,
+      "last/epoch": 20.0,
+      "last/val_map50": 0.47089332342147827,
+      "last/val_map50_95": 0.272228866815567,
+      "last/val_mar100": 0.49757906794548035
+    },
+    "run_id": "5b2630950f384adeb9c68bacc44764bb",
+    "run_name": "F_final_fcos_tuned"
+  },
+  "normalization": {
+    "applied_additions_this_invocation": 0,
+    "historical_timestamp_policy": "New summaries use normalization time; original timestamps are unchanged",
+    "mode": "apply",
+    "normalized_entries_present": 396,
+    "planned_additions_at_start": 0,
+    "remaining_additions": 0,
+    "skipped_runs": 13,
+    "summary_step": 0,
+    "timestamp_utc": "2026-09-14T19:35:28.342700+00:00",
+    "verified_runs": 36,
+    "version": "1"
+  },
+  "semantics": {
+    "epoch_metrics": "Original historical keys and rows are preserved",
+    "mar100_scope": "Applied only to verified TorchMetrics FCOS histories; YOLO recall is not relabeled",
+    "summary_metrics": [
+      "best/val_map50_95",
+      "best/val_map50",
+      "best/val_mar100",
+      "best/epoch",
+      "last/val_map50_95",
+      "last/val_map50",
+      "last/val_mar100",
+      "last/epoch"
+    ],
+    "summary_tags": {
+      "normalization/source": "project_artifacts",
+      "normalization/status": "verified",
+      "normalization/version": "1"
+    }
+  },
+  "status_counts": {
+    "FAILED": 5,
+    "FINISHED": 44
+  }
+}
