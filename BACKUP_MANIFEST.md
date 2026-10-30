@@ -1,6 +1,6 @@
 # Backup manifest
 
-Status at 2026-10-30: `BACKUP_PARTIAL` until the clean restore test and the new documentation commit are verified remotely. Local deletion is prohibited while this status remains partial.
+Status at 2026-10-30: `BACKUP_VERIFIED`. This classification covers GitHub source/history, all four DVC outputs, and the 15-object human-readable Google Drive artifact archive. It does not authorize local deletion; the separate explicit-confirmation safety gate still applies.
 
 ## GitHub
 
@@ -8,9 +8,9 @@ Status at 2026-10-30: `BACKUP_PARTIAL` until the clean restore test and the new 
 - Visibility observed during audit: public.
 - Default branch: `main`.
 - Migration branch: `develop`.
-- Pre-audit `develop` commit: `f1ec2c23a036a00e537f638c527fbb439e17d28b`.
-- Pre-audit remote comparison: local `develop` matched `origin/develop`.
-- Tracked files before this documentation update: 361.
+- Verified `develop` commit: `9e66b69ce706b8dd67be971678ed967a2375d7c1`.
+- Remote comparison: local `develop`, `origin/develop`, and the GitHub API all returned the verified commit.
+- Tracked files before the migration commit: 361; the migration commit adds the documentation, dependency manifests, and two MLflow DVC pointers.
 
 Git retains source code, notebooks, configurations, provenance files, experiment definitions, metric tables, figures, deployment code, tests, documentation, and the two DVC pointer files. Git does not retain ignored binary model outputs, the canonical dataset bytes, local environments, caches, secrets, or live MLflow storage.
 
@@ -20,8 +20,11 @@ Git retains source code, notebooks, configurations, provenance files, experiment
 - Backend: Google Drive.
 - Remote folder ID: `1H8ivmkImy8FmMMC4Xx8bpH6qs8eFDXMG`.
 - Objects: canonical DENTEX dataset, selected final FCOS checkpoint, 118-file legacy MLflow directory, and MLflow SQLite database.
-- Verification on 2026-10-30: `dvc status -c` reported `Cache and remote 'storage' are in sync` for the repository and for each pointer separately.
-- Recovery test: pending completion in `E:\dental-xray-restore-test-20261030` when this file was drafted.
+- Verification on 2026-10-30: `dvc status -c` reported `Cache and remote 'storage' are in sync` in both the original and clean clone.
+- Recovery test: clean clone of `develop` at the verified commit followed by `dvc pull` completed in `E:\dental-xray-restore-test-20261030`.
+- Restored dataset: 709 files, 2,893,869,595 bytes. The train, validation, and test annotation SHA-256 values matched `configs/derived_dataset_provenance.yaml`.
+- Restored checkpoint SHA-256: `ec4ee94b2bf7afcb77873fe4d26915bec2c7af71f09cd68353beb65561ca783d`.
+- Restored MLflow state: 118 files totaling 1,619,148 bytes plus a 4,526,080-byte database. Database SHA-256: `9a1825f66ebccc4a34d205a3ffe0473f98d13b1e5caf9dbf0dbf6c13643f63e0`.
 
 OAuth client configuration and tokens are local secrets. They are not part of the backup manifest and must be recreated by an authorized user during restoration.
 
@@ -33,7 +36,7 @@ OAuth client configuration and tokens are local secrets. They are not part of th
 - YOLO, SSD, FCOS, Faster R-CNN, and DETR architecture-screening weights;
 - refinement checkpoints A4, B3, R1, G2, C1, V3, D4, and E3.
 
-The selected final F checkpoint is covered separately by DVC and therefore has two recovery paths.
+On 2026-10-30 the Google Drive API confirmed that every archived object exists and is not trashed. For all 15 objects, the Drive byte size and MD5 checksum matched the corresponding local file. The local SHA-256 values also matched the committed archive report. The selected final F checkpoint is covered separately by DVC and therefore has two recovery paths.
 
 ## Intentionally excluded local state
 
