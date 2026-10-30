@@ -1,0 +1,7 @@
+# Canonical Windows/Linux GPU stack. Install this file before project extras.
+# The dedicated PyTorch index is mandatory: plain `pip install torch` can
+# select a CPU or another CUDA build.
+--index-url https://download.pytorch.org/whl/cu128
+torch==2.11.0
+torchvision==0.26.0
+torchaudio==2.11.0

@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=78,<82"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dental-xray-pathology-detection"
+version = "0.1.0"
+description = "Reproducible research environment for dental X-ray pathology detection."
+requires-python = ">=3.12,<3.13"
+dependencies = []
+
+[project.optional-dependencies]
+# Install the CUDA-specific PyTorch trio from requirements/pytorch-cu128.txt
+# before installing these groups. Keeping it out of this metadata prevents pip
+# from silently selecting a CPU or different-CUDA wheel from PyPI.
+training = [
+  "ultralytics==8.4.143",
+  "numpy==2.5.2",
+  "pandas==3.0.5",
+  "Pillow==12.3.0",
+  "matplotlib==3.11.1",
+  "seaborn==0.13.2",
+  "tqdm==4.70.0",
+  "torchmetrics==1.9.0",
+  "pycocotools==2.0.11",
+  "timm==1.0.29",
+  "transformers==5.16.1",
+  "safetensors==0.8.0",
+  "scikit-learn==1.9.0",
+]
+notebooks = [
+  "jupyterlab==4.6.3",
+  "ipykernel==7.3.0",
+]
+tracking = ["mlflow==3.16.0"]
+dvc = ["dvc[gdrive]==3.67.1"]
+onnx = ["onnx==1.22.0", "onnxruntime==1.30.0"]
+dev = ["pytest==8.4.2", "ruff==0.16.7"]
+
+[tool.pytest.ini_options]
+testpaths = ["deployment/tests"]
+addopts = "-q"
+
+[tool.setuptools]
+# This repository is a research workspace, not a distributable Python package.
+# The project metadata exists to provide named, reproducible dependency groups.
+py-modules = []
+
+[tool.ruff]
+target-version = "py312"
+line-length = 110

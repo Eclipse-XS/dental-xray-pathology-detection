@@ -12,13 +12,12 @@ The remote currently protects:
 
 - the canonical DENTEX dataset referenced by `data/processed/dentex_diagnosis.dvc`;
 - the final selected FCOS checkpoint referenced by `artifacts/refinement/fcos/F_final_fcos_tuned/best.pth.dvc`.
+- the legacy MLflow run directory referenced by `mlruns.dvc`;
+- the MLflow SQLite database referenced by `artifacts/modeling/mlflow.db.dvc`.
 
-The remote does not currently protect:
-
-- `artifacts/modeling/mlflow.db`;
-- historical non-final checkpoints;
-- `mlruns/`;
-- ONNX exports unless they are explicitly added to DVC later.
+Historical non-final checkpoints and the ONNX export are stored in the
+human-readable Google Drive archive recorded in
+`artifacts/provenance/artifact_cleanup_report.json`; they are not DVC outputs.
 
 ## Recovery after cloning
 
@@ -28,11 +27,13 @@ A Git clone restores the repository and DVC pointers, but not the referenced dat
 dvc pull
 ```
 
-This restores both currently tracked outputs. To restore them individually:
+This restores all currently tracked outputs. To restore them individually:
 
 ```powershell
 dvc pull data/processed/dentex_diagnosis.dvc
 dvc pull artifacts/refinement/fcos/F_final_fcos_tuned/best.pth.dvc
+dvc pull mlruns.dvc
+dvc pull artifacts/modeling/mlflow.db.dvc
 ```
 
 The remote URL and default remote name are project metadata in `.dvc/config`. OAuth client configuration and tokens are local credentials; they must remain outside tracked files. This repository ignores `.dvc/config.local` for that purpose.
