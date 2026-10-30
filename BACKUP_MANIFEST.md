@@ -8,8 +8,8 @@ Status at 2026-10-30: `BACKUP_VERIFIED`. This classification covers GitHub sourc
 - Visibility observed during audit: public.
 - Default branch: `main`.
 - Migration branch: `develop`.
-- Verified `develop` commit: `9e66b69ce706b8dd67be971678ed967a2375d7c1`.
-- Remote comparison: local `develop`, `origin/develop`, and the GitHub API all returned the verified commit.
+- Restore-tested content commit: `9e66b69ce706b8dd67be971678ed967a2375d7c1`.
+- Remote comparison: local `develop`, `origin/develop`, and the GitHub API matched after the restore evidence was committed. The later manifest-only commit does not change any restored payload or DVC pointer.
 - Tracked files before the migration commit: 361; the migration commit adds the documentation, dependency manifests, and two MLflow DVC pointers.
 
 Git retains source code, notebooks, configurations, provenance files, experiment definitions, metric tables, figures, deployment code, tests, documentation, and the two DVC pointer files. Git does not retain ignored binary model outputs, the canonical dataset bytes, local environments, caches, secrets, or live MLflow storage.
